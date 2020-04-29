@@ -1,0 +1,145 @@
+/* IMPORT CSS from vendor */
+@import "../vendor/material_icons.css";
+@import "../vendor/materialize.css";
+
+/*FONTS-FAMILY*/
+@font-face
+{
+    font-family: 'ROMAN';
+    src: url('fonts/Roman.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'GRECO';
+    src: url('fonts/Greco.ttf') format('truetype');
+}
+
+/*HTML TAGS*/
+html {
+    background: url(../images/24490.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+thead {
+    background-color: rgba(100, 149, 237, 0.85);
+}
+
+input, label {
+    font-family: ROMAN, sans-serif;
+    font-size: 20px !important;
+}
+
+/*INDEX IMAGES*/
+#indexImage1 {
+    background: url(../images/images1.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+
+#indexImage2 {
+    background: url(../images/images2.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+
+#indexImage3 {
+    background: url(../images/images3.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+
+#indexImage4 {
+    background: url(../images/images1.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+
+/*ID*/
+#logo {
+    max-height: 100px;
+}
+
+#clock {
+    display: flex;
+    flex-direction: row;
+}
+
+#facebookSide {
+    background-size: contain;
+    background: url('../images/facebook.png') no-repeat center;
+}
+
+/*GLOBALS CLASSES*/
+.firstFont {
+    font-family: 'ROMAN', serif;
+}
+
+.secondFont {
+    font-family: 'GRECO', sans-serif;
+}
+
+.blueTransparent {
+    background-color: rgba(100, 149, 237, 0.60);
+}
+
+.whiteTransparent {
+     background-color: rgba(255, 255, 255, 0.6);
+ }
+
+.border-5 {
+    border-radius: 5px;
+}
+
+.border-b-5 {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.border-t-5 {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.bigText {
+    font-size: 4vw;
+}
+
+.titleText {
+    font-size: 5vw;
+    font-min-size: 30px;
+}
+
+.text-25 {
+    font-size: 25px;
+}
+
+.justify-text {
+    text-align: justify;
+}
+
+.oneElven {
+    width: 9vw;
+}
+
+.margin-t-20 {
+    margin-top: 20px !important;
+}
+
+.margin-t-15 {
+    margin-top: 15px !important;
+}
+
+
+/*ELEMENTS CLASSES*/
+.clockNumbers {
+    margin: 0.09vw;
+}
+
+
