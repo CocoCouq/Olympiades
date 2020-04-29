@@ -40,8 +40,28 @@ class Player {
         $result_test->bindParam(':pseudo', $user_pseudo);
         $result_test->execute();
         $tab = $result_test->fetchAll();
+        $result_test->closeCursor();
 
         return count($tab);
+    }
+
+    // Edit player
+    public function editPLayer(array $array) :void
+    {
+        $request_edit = 'UPDATE participants SET name = :name, f_name = :f_name, pseudo = :pseudo, mail = :email, phone = :phone WHERE id = :id';
+        $result_edit = $this->db->prepare($request_edit);
+        $result_edit->execute($array);
+        $result_edit->closeCursor();
+    }
+
+    // Delete player
+    public function deletePlayer(int $id) :void
+    {
+        $request_delete = 'DELETE FROM participants WHERE id = :id';
+        $result_delete = $this->db->prepare($request_delete);
+        $result_delete->bindParam(':id', $id);
+        $result_delete->execute();
+        $result_delete->closeCursor();
     }
 
     public function __destruct()
