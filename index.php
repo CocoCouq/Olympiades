@@ -3,8 +3,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="assets/images/logo.png">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -16,12 +15,31 @@
 <div class="navbar-fixed">
 <nav class="white firstFont">
     <div class="nav-wrapper">
-        <div class="row">
-            <a href="" class="brand-logo"><img id="logo" class="responsive-img" src="assets/images/logo.png" alt="Accueil"></a>
+        <div>
+            <a href="" class="brand-logo"><img id="logo" class="responsive-img circle" src="assets/images/logo_nav.png" alt="Accueil"></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a class="black-text text-25" href="views/proofs.php">Epreuves</a></li>
-                <li><a class="black-text text-25" href="views/archives.php">Archives</a></li>
+                <!--Proofs-->
+                <li>
+                    <a class='dropdown-trigger black-text text-20' href='#' data-target='dropdownProof'>Epreuves</a>
+
+                    <ul id='dropdownProof' class='dropdown-content'>
+                        <li><a href="views/proofs/chartes.php"><i class="tiny material-icons">description</i><small>CBC</small></a></li>
+                        <li class="divider"></li>
+                        <li><a href="#!">Beer-Pong</a></li>
+                        <li><a href="#!">Cornhole</a></li>
+                        <li><a href="#!">Flip cup</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class='dropdown-trigger black-text text-20' href='#' data-target='dropdownTrash'>Trash talk</a>
+
+                    <ul id='dropdownTrash' class='dropdown-content'>
+                        <li><a href="#!">Wall of Fame</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#!">Inscrits</a></li>
+                    </ul>
+                </li>
                 <li><a href="#"><img class="margin-t-15" src="assets/images/facebook.png" alt=""></a></li>
             </ul>
         </div>
@@ -32,17 +50,31 @@
 </header>
 <!--Mobile Navigation-->
 <ul class="sidenav firstFont" id="mobile-demo">
-    <li class="row">
-        <div class="center-align secondFont">Le combat des héros</div>
+    <li class="row gold-back">
+        <div class="center-align secondFont text-20">LE COMBAT DES HÉROS</div>
         <div class="row">
-        <img class="responsive-img col s4 offset-s4" src="assets/images/logo.png" alt="">
+            <img class="responsive-img col s6 offset-s3" src="assets/images/logo.png" alt="">
         </div>
     </li>
-    <li class="divider"></li>
     <li><a href="#">Accueil</a></li>
-    <li><a href="views/proofs.php">Epreuves</a></li>
-    <li><a href="views/archives.php">Archives</a></li>
-    <li class="divider"></li>
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header"><i class="material-icons">local_bar</i>Epreuves</div>
+            <div class="collapsible-body">
+                <div class="row margin-b-d10"><a class="grey-text text-20 col s12" href="views/proofs/chartes.php"><i class="tiny material-icons">description</i>    CBC</a></div>
+                <div class="row margin-b-d10"><a class="grey-text text-darken-2 text-20 col s12" href="#"><i class="tiny material-icons">local_drink</i>    Beer-Pong</a></div>
+                <div class="row margin-b-d10"><a class="grey-text text-darken-2 text-20 col s12" href="#"><i class="tiny material-icons">gps_fixed</i>    Cornhole</a></div>
+                <div class="row margin-b-d10"><a class="grey-text text-darken-2 text-20 col s12" href="#"><i class="tiny material-icons">hourglass_full</i>    Flip cup</a></div>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">forum</i>Trash talk</div>
+            <div class="collapsible-body">
+                <div class="row margin-b-d10"><a class="red-text text-darken-2 text-20 col s12" href="#"><i class="tiny material-icons">whatshot</i>    Wall of Fame</a></div>
+                <div class="row margin-b-d10"><a class="grey-text text-darken-2 text-20 col s12" href="#"><i class="tiny material-icons">wc</i>    Inscrits</a></div>
+            </div>
+        </li>
+    </ul>
     <li class="row">
         <a id="facebookSide" class="col s3" href="#" title="facebook">
         </a>
@@ -51,20 +83,21 @@
 <main>
 
     <!--TIMER-->
-    <h1 class="center-align secondFont flow-text">Ca commence dans</h1>
+    <h1 class="center-align secondFont text-30">PORTES TES COUILLES</h1>
+    <div class="center-align secondFont text-20">début des hostilités dans :</div>
 
-    <div id="clock" class="container row center-align firstFont">
-        <div id="clock1" class="white oneElven border-5 bigText z-depth-1 clockNumbers">0</div>
-        <div id="clock2" class="white oneElven border-5 bigText z-depth-1 clockNumbers">0</div>
+    <div id="clock" class="container row center-align thirdFont">
+        <div id="clock1" class="gold-back oneElven bigText border-2 clockNumbers">0</div>
+        <div id="clock2" class="gold-back oneElven bigText border-2 clockNumbers">0</div>
         <div class="oneElven bigText oneElven">:</div>
-        <div id="clock3" class="white oneElven border-5 bigText z-depth-1 clockNumbers">0</div>
-        <div id="clock4" class="white oneElven border-5 bigText z-depth-1 clockNumbers">0</div>
+        <div id="clock3" class="gold-back oneElven bigText border-2 clockNumbers">0</div>
+        <div id="clock4" class="gold-back oneElven bigText border-2 clockNumbers">0</div>
         <div class="oneElven bigText">:</div>
-        <div id="clock5" class="white oneElven border-5 bigText z-depth-1 clockNumbers">0</div>
-        <div id="clock6" class="white oneElven border-5 bigText z-depth-1 clockNumbers">0</div>
+        <div id="clock5" class="gold-back oneElven bigText border-2 clockNumbers">0</div>
+        <div id="clock6" class="gold-back oneElven bigText border-2 clockNumbers">0</div>
         <div class="col s1 bigText">:</div>
-        <div id="clock7" class="white oneElven border-5 bigText z-depth-1 clockNumbers">0</div>
-        <div id="clock8" class="white oneElven border-5 bigText z-depth-1 clockNumbers">0</div>
+        <div id="clock7" class="gold-back oneElven bigText border-2 clockNumbers">0</div>
+        <div id="clock8" class="gold-back oneElven bigText border-2 clockNumbers">0</div>
     </div>
 
     <!--SUBSCRIBE MESSAGE-->
@@ -73,31 +106,27 @@
     <section class="container section">
         <!--HEADING CAROUSEL-->
         <div class="carousel carousel-slider center border-t-5">
-            <div class="carousel-fixed-item center firstFont white-text">
-                Texte Permanent
-            </div>
             <div id="indexImage1" class="carousel-item white-text" href="#one!">
-                <h2>First Panel</h2>
-                <p class="white-text">This is your first panel</p>
+                <h2 class="black-text text-contrast secondFont">DES SALOPES</h2>
+                <p class="text-contrast black-text">...</p>
             </div>
             <div id="indexImage2" class="carousel-item white-text" href="#two!">
-                <h2>Second Panel</h2>
-                <p class="white-text">This is your second panel</p>
+                <h2 class="black-text text-contrast secondFont">DE L'AMBIGUITÉ</h2>
+                <p class="text-contrast black-text">...</p>
             </div>
             <div id="indexImage3" class="carousel-item white-text" href="#three!">
-                <h2>Third Panel</h2>
-                <p class="white-text">This is your third panel</p>
+                <h2 class="black-text text-contrast secondFont">DES REBONDISSEMENTS</h2>
+                <p class="text-contrast black-text">...</p>
             </div>
             <div id="indexImage4" class="carousel-item white-text" href="#four!">
-                <h2>Fourth Panel</h2>
-                <p class="white-text">This is your fourth panel</p>
+                <h2 class="black-text text-contrast secondFont">POUR LA GLOIRE</h2>
             </div>
         </div>
 
         <!--FORM MODAL-->
-        <div class="center-align white section">
+        <div class="center-align white section border-b-5">
             <!-- Modal Trigger -->
-            <a class="btn-large modal-trigger blue secondFont text-25" href="#modal1">Inscription</a>
+            <a class="btn-large modal-trigger gold-back secondFont text-30 black-text" href="#modal1">Inscription</a>
 
             <!-- Modal Structure -->
             <div id="modal1" class="modal">
@@ -148,27 +177,6 @@
             </div>
         </div>
         <!--END FORM-->
-
-        <!--TABLE PLAYERS-->
-        <div class="border-b-5 blueTransparent">
-            <table class="centered striped responsive-table">
-                <thead>
-                <tr class="secondFont">
-                    <th class="flow-text">Nom</th>
-                    <th class="flow-text">Appelez le</th>
-                </tr>
-                </thead>
-
-                <tbody class="firstFont">
-                <?php foreach ($tab as $row) { ?>
-                <tr>
-                    <td class="flow-text"><?= $row->f_name ?> <?= substr($row->name, 0, 1) ?>.</td>
-                    <td class="flow-text"><?= $row->pseudo ?></td>
-                </tr>
-                <?php } ?>
-                </tbody>
-            </table>
-        </div>
     </section>
 
 </main>
@@ -176,9 +184,9 @@
 
 
 <footer class="white hide-on-med-and-down">
-    <div class="container">
+    <div>
         © 2020 Copyright
-        <a class="grey-text text-lighten-4 right" href="#GitHubCoco">Code Source</a>
+        <a class="grey-text text-lighten-4 right" href="https://github.com/CocoCouq" target="_blank">Code Source</a>
     </div>
 </footer>
 
