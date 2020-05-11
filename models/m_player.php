@@ -22,10 +22,35 @@ class Player {
         return $tab;
     }
 
+    // User login
+    public function getByLogin(string $login) :object
+    {
+        $request = 'SELECT * FROM participants WHERE pseudo = :login OR mail = :login';
+        $result = $this->db->prepare($request);
+        $result->bindParam(':login', $login);
+        $result->execute();
+        $row = $result->fetch(PDO::FETCH_OBJ);
+        $result->closeCursor();
+
+        return $row;
+    }
+
+    // List of last players
+    public function getLastSubscription() : array
+    {
+        $request = 'SELECT * FROM participants ORDER BY id DESC LIMIT 5';
+        $result = $this->db->prepare($request);
+        $result->execute();
+        $tab = $result->fetchAll(PDO::FETCH_OBJ);
+        $result->closeCursor();
+
+        return $tab;
+    }
+
     // Add player
     public function addPlayer(array $array) :void
     {
-        $request_insert = 'INSERT INTO participants(name, f_name, pseudo, mail, phone) VALUE (:name, :f_name, :pseudo, :email, :phone)';
+        $request_insert = 'INSERT INTO participants(name, f_name, pseudo, mail, phone, password, description) VALUE (:name, :f_name, :pseudo, :email, :phone, :pwd, :desc)';
         $result_insert = $this->db->prepare($request_insert);
         $result_insert->execute($array);
         $result_insert->closeCursor();

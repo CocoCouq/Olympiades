@@ -10,6 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    let elems = document.querySelectorAll('.dropdown-trigger');
+    let instances = M.Dropdown.init(elems);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    let elems = document.querySelectorAll('.collapsible');
+    let instances = M.Collapsible.init(elems);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
     let elems = document.querySelectorAll('.carousel');
     let instances = M.Carousel.init(elems, {
         indicators: true,
@@ -26,4 +36,18 @@ document.addEventListener('DOMContentLoaded', function() {
         hoverEnabled: false
     });
 });
+
+
+////////////////////////////////////////////////////////////////
+
+if (document.getElementById('fakeSubmit')) {
+    document.getElementById('fakeSubmit').addEventListener('click', function (event) {
+        M.toast({html: '<div class="row">' +
+            '<h4 class="red-text col s12 center-align text-30">HOP, à la poubelle !</h4> ' +
+            '<div class="col s12 center-align"><i class="large material-icons red-text">delete</i></div> ' +
+            '</div>'})
+        document.getElementById('name').value = ""
+        document.getElementById('textarea').value = ""
+    })
+}
 

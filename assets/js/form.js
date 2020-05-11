@@ -1,7 +1,7 @@
 let filterVide = /(^$)/;
 let filterPseudo = /(^[\wéèêëûüîïôàçæœ\s\-.'"!]{4,20}$)/i;
 let filterName = /(^[a-zéèêëôœîïûüàáâæç'-]+\s*)$/i;
-let filterMail = /(^[\w\.-]+@[\w\.-]+\.[\w]{2,4}\s*)$/;
+let filterMail = /(^[\w.-]+@[\w.-]+\.[\w]{2,4}\s*)$/;
 let filterPhone = /(^(06|07)\d{8}$)/;
 
 
@@ -34,7 +34,7 @@ element.addEventListener("click", function verify(event)
         event.preventDefault();
     }
     else
-        document.getElementById("missName").innerHTML= "<h6 class=\"green-text\">OK</h6>";
+        document.getElementById("missFName").innerHTML= "<h6 class=\"green-text\">OK</h6>";
 
     //  Mail
     let mail = document.getElementById("mailInput").value;
@@ -82,6 +82,30 @@ element.addEventListener("click", function verify(event)
     }
     else
         document.getElementById("missAccept").innerHTML = "";
+
+    //  Password
+    let pwd = document.getElementById("pwd1").value
+    let pwd_conf = document.getElementById('pwd2').value
+    if (pwd !== pwd_conf || pwd.length < 8)
+    {
+        if (pwd !== pwd_conf)
+            document.getElementById("missPwd").textContent = "Les mots de passes ne sont pas identiques";
+        else
+            document.getElementById("missPwd").textContent = "Le mot de passe doit contenir au moins 8 caractères";
+        event.preventDefault();
+    }
+    else
+        document.getElementById("missPwd").innerHTML= "<h6 class=\"green-text\">OK</h6>";
+
+    //  Description
+    let description = document.getElementById("description").value
+    if (description.length < 5)
+        document.getElementById("missDesc").textContent = "Pas assez inspiré";
+    else if (description.length >= 50)
+        document.getElementById("missDesc").innerHTML= "Trop inspiré (50 caractères max)";
+    else
+        document.getElementById("missDesc").innerHTML= "<h6 class=\"green-text\">OK</h6>";
+
 });
 
 
@@ -97,5 +121,20 @@ elementPseudo.addEventListener("input", function nom(event){
     else if (len >= 20)
         document.getElementById("missPseudo").textContent = `${len} caractères (20max)`;
     else
-        document.getElementById("missPseudo").textContent = "";
+        document.getElementById("missPseudo").textContent = "<h6 class=\"green-text\">OK</h6>";
+});
+
+// Description
+let elementSlogan = document.getElementById('description');
+
+elementSlogan.addEventListener("input", function nom(event){
+    let slogan = document.getElementById("description").value;
+    let len = slogan.length;
+
+    if (len < 5)
+        document.getElementById("missDesc").textContent = `${5 - len} caractères minimum`;
+    else if (len >= 50)
+        document.getElementById("missDesc").textContent = `${len} caractères (50max)`;
+    else
+        document.getElementById("missDesc").textContent = "<h6 class=\"green-text\">OK</h6>";
 });
