@@ -1,0 +1,33 @@
+{
+  "name": "olympiades",
+  "version": "1.1.0",
+  "description": "The real project",
+  "main": "app.js",
+  "scripts": {
+    "build:assets": "cd public && mkdir assets && cd assets && mkdir css && mkdir js && mkdir vendor && cd ../..",
+    "build:js" : "webpack && cp src/js/clock.js public/assets/js && cp -R src/images public/assets",
+    "build:css": "postcss src/**/*.css --base src --dir public/assets && cp -R src/vendor/fonts public/assets/vendor",
+    "build:all": "rm -rf public/assets && npm run build:assets && npm run build:js && npm run build:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CocoCouq/Olympiades.git"
+  },
+  "author": "Couq Corentin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CocoCouq/Olympiades/issues"
+  },
+  "homepage": "https://github.com/CocoCouq/Olympiades#readme",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.2.0",
+    "autoprefixer": "^9.8.0",
+    "cssnano": "^4.1.10",
+    "glob": "^7.1.6",
+    "mini-css-extract-plugin": "^0.9.0",
+    "purgecss-webpack-plugin": "^2.2.0",
+    "tailwindcss": "^1.4.6",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}

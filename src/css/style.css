@@ -1,0 +1,230 @@
+/*HTML TAGS*/
+html {
+    background-image: url('../images/globals/1768585.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+h1 {
+    color: white;
+}
+
+a {
+    outline: none;
+}
+
+thead {
+    background-color: rgba(100, 149, 237, 0.85);
+}
+
+blockquote {
+    border-color: white;
+}
+
+/*INDEX IMAGES*/
+#indexLogo {
+    height: 180px;
+    width: auto;
+}
+
+#indexImage {
+    height: 60vh !important;
+    background-image: url('../images/styles/image1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/*ID*/
+#logo {
+    background: url(../images/globals/logo_nav.png) no-repeat center;
+    width: 100px;
+    height: 50px;
+    background-size: contain;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#clock {
+    display: flex;
+    flex-direction: row;
+}
+
+#facebookSide {
+    background-size: contain;
+    background: url('../images/globals/facebook.png') no-repeat center;
+}
+
+#filter-grey {
+    height: 60vh;
+    background-color: rgba(50, 52, 52, 0.65);
+}
+
+#button-inscription {
+    border: rgba(253, 139, 51, 0.81) 1px inset;
+    background: linear-gradient(125deg, rgba(166, 63, 63, 0.60), rgba(246, 152, 38, 0.6), rgba(250, 233, 179, 0.6));
+}
+
+#button-inscription:hover {
+    background-color: rgba(198,173,0,0.75);
+}
+
+#button-inscription:active {
+    background-color: rgba(12, 46, 62, 0.82);
+}
+
+/*GLOBALS CLASSES*/
+.block {
+    height: 100vh;
+}
+
+.firstFont {
+    font-family: 'Coco', serif;
+}
+
+.secondFont {
+    font-family: 'Robo', sans-serif;
+}
+
+.thirdFont {
+    font-family: 'Alarm', sans-serif;
+}
+
+.blueTransparent {
+    background-color: rgba(100, 149, 237, 0.60);
+}
+
+.whiteTransparent {
+     background-color: rgba(255, 255, 255, 0.6);
+ }
+
+.black-back {
+    background-color: rgba(10,14,16,0.85) !important;
+}
+
+.gold-back {
+    background: url(../images/styles/gold.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.border-gold {
+    border: 3px solid;
+    border-image: url("../images/styles/gold.jpg") 1 1 round;
+}
+
+.border-gold-round {
+    border: solid 3px transparent;
+    border-radius: 80px;
+    background-image: linear-gradient(white, white), url("../images/styles/gold.jpg");
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.border-2 {
+    border-radius: 2px;
+}
+
+.border-b-2 {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.border-t-2 {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.border-5 {
+    border-radius: 5px;
+}
+
+.border-b-5 {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.border-t-5 {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.shadow-top {
+    border-top: rgba(17,17,17,0.5) 2px inset;
+}
+
+.bigText {
+    font-size: 4vw;
+}
+
+.titleText {
+    font-size: 5vw;
+    font-min-size: 30px;
+}
+
+.text-contrast {
+    text-shadow: white 0 0 3px, 1px 1px whitesmoke;
+}
+
+.text-25 {
+    font-size: 25px;
+}
+
+.text-20 {
+    font-size: 20px;
+}
+
+.text-30 {
+    font-size: 30px;
+}
+
+.justify-text {
+    text-align: justify;
+}
+
+.oneElven {
+    width: 9vw;
+}
+
+.margin-t-20 {
+    margin-top: 20px !important;
+}
+
+.margin-t-15 {
+    margin-top: 15px !important;
+}
+
+.margin-b-10 {
+    margin-bottom: 10px;
+}
+
+.margin-b-d10 {
+    margin-bottom: -10px !important;
+}
+
+.min-500 {
+    min-height: 130px;
+    max-height: 130px;
+}
+
+
+/*ELEMENTS CLASSES*/
+.side-items:hover {
+    background-color: rgba(130, 129, 129, 0.49);
+}
+
+.clockNumbers {
+    margin: 0.09vw;
+    /*border: rgba(69, 69, 69, 0.59) 1px groove;*/
+}
