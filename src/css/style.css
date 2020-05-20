@@ -1,3 +1,22 @@
+/*FONTS-FAMILY*/
+@font-face
+{
+    font-family: 'Robo';
+    src: url('../vendor/fonts/futur.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Alarm';
+    src: url('../vendor/fonts/alarm.ttf') format('truetype');
+}
+
+/*@font-face*/
+/*{*/
+/*    font-family: 'Coco';*/
+/*    src: url('../vendor/fonts/futur.ttf') format('truetype');*/
+/*}*/
+
 /*HTML TAGS*/
 html {
     background-image: url('../images/globals/1768585.jpg');
@@ -227,4 +246,38 @@ blockquote {
 .clockNumbers {
     margin: 0.09vw;
     /*border: rgba(69, 69, 69, 0.59) 1px groove;*/
+}
+
+#chat {
+    height: 60vh;
+    overflow: scroll;
+}
+.message {
+    background-color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.messageUser {
+    background-color: #609af3;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.authorMessage {
+    padding: 3px !important;
+}
+#playersLine {
+    width: 100vw;
+    overflow: auto;
+    white-space: nowrap;
+}
+.playersBlock {
+    display: inline-block;
+}
+.text-5 {
+    font-size: 5vh;
+}
+.text-2 {
+    font-size: 2vh;
 }

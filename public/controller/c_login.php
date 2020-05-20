@@ -21,7 +21,7 @@ if (isset($_POST['btnLogin'])) {
                     $_SESSION['login'] = $row->pseudo;
                     $_SESSION['connected'] = 'OK';
                     session_regenerate_id();
-                    header('location:../talk/index.php');
+                    header('location:../talk/talk.php');
                 }
                 else {
                     $pwd_message = 'Mot de passe incorrect';

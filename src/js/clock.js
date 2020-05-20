@@ -24,7 +24,7 @@ function writeTime() {
     document.getElementById('clock7').innerText = tabSec[0]
     document.getElementById('clock8').innerText = tabSec[1]
 
-    setTimeout("writeTime()", 999);
+    window.setTimeout("writeTime()", 999);
 }
 
 function getByTen(number) {

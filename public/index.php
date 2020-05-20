@@ -31,13 +31,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a class='dropdown-trigger text-20' href='#' data-target='dropdownTrash' title="">Trash talk</a>
-
-                    <ul id='dropdownTrash' class='dropdown-content'>
-                        <li><a href="views/talk/index.php#WallOfFame" class="center-align" title="Wall of Fame">Wall of Fame</a></li>
-                        <li class="divider"></li>
-                        <li><a href="views/talk/index.php#players" title="Inscrits">Inscrits</a></li>
-                    </ul>
+                    <a class='text-20 red-text' href='views/talk/talk.php' title="Trash Talk">Trash talk</a>
                 </li>
                 <li class="gold-back"><a href="views/login/login.php" title="Compte"><i class="material-icons">person</i></a></li>
                 <li><a href="#" title="facebook"><img class="margin-t-15" src="assets/images/globals/facebook.png" alt=""></a></li>
@@ -58,22 +52,18 @@
             <div class="center-align secondFont text-20 col s12">be olympiades</div>
         </div>
     </li>
-    <li><a href="#" class="white-text" title="Accueil">Accueil</a></li>
+    <li><a href="#" class="white-text" title="Accueil">Accueil<i class="material-icons white-text">home</i></a></li>
+    <li><a href="views/talk/talk.php" class="red-text" title="Trash Talk">Trash talk<i class="material-icons red-text">whatshot</i></a></li>
     <ul class="collapsible white-text">
         <li>
-            <div class="collapsible-header"><i class="material-icons">local_bar</i>Epreuves</div>
+            <div class="collapsible-header gold-back row">
+                <div class="col s12 valign-wrapper secondFont text-30 black-text text-contrast"><i class="material-icons">arrow_downward</i>Epreuves</div>
+            </div>
             <div class="collapsible-body grey darken-3">
                 <div class="row margin-b-d10 side-items"><a class="grey-text text-lighten-3 text-20 col s12" href="views/proofs/chartes.php" title="Fair-Play"><i class="tiny material-icons">description</i>    Fair-Play</a></div>
                 <div class="row margin-b-d10 side-items"><a class="grey-text text-lighten-1 text-20 col s12" href="views/proofs/beer.php" title="Beer-Pong"><i class="tiny material-icons">local_drink</i>    Beer-Pong</a></div>
                 <div class="row margin-b-d10 side-items"><a class="grey-text text-lighten-1 text-20 col s12" href="views/proofs/corn.php" title="Cornhole"><i class="tiny material-icons">gps_fixed</i>    Cornhole</a></div>
                 <div class="row margin-b-d10 side-items"><a class="grey-text text-lighten-1 text-20 col s12" href="views/proofs/flip.php" title="Flip Cup"><i class="tiny material-icons">hourglass_full</i>    Flip cup</a></div>
-            </div>
-        </li>
-        <li>
-            <div class="collapsible-header"><i class="material-icons">forum</i>Trash talk</div>
-            <div class="collapsible-body grey darken-3">
-                <div class="row margin-b-d10 side-items"><a class="red-text text-darken-2 text-20 col s12" href="views/talk/index.php#WallOfFame" title="Wall Of Fame"><i class="tiny material-icons">whatshot</i>    Wall of Fame</a></div>
-                <div class="row margin-b-d10 side-items"><a class="grey-text text-lighten-1 text-20 col s12" href="views/talk/index.php#players" title="Inscrits"><i class="tiny material-icons">wc</i>    Inscrits</a></div>
             </div>
         </li>
         <li class="divider"></li>
@@ -89,7 +79,7 @@
 <main>
 
     <!--TIMER-->
-    <h1 class="center-align secondFont text-30">Début des hostilités dans :</h1>
+    <h1 class="center-align secondFont text-25">Début des hostilités dans :</h1>
 
     <div id="clock" class="container row center-align thirdFont">
         <div id="clock1" class="black-back border-gold white-text oneElven bigText clockNumbers">0</div>
