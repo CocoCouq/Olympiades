@@ -25,7 +25,11 @@ if (isset($_POST['btnAddPlayer']) && !empty($_POST['name']) && !empty($_POST['f_
 
         if ($count == 0) {
             $players->addPlayer($array);
-            $message = 'Bienvenue dans la cour des grands<br><a class="btn gold-back secondFont black-text text-contrast text-25" href="../views/talk/index.php#WallOfFame">Signales ton arrivée</a>';
+            session_start();
+            $_SESSION['login'] = $array[':pseudo'];
+            $_SESSION['connected'] = 'OK';
+            session_regenerate_id();
+            $message = 'Bienvenue dans la cour des grands<br><a class="btn gold-back secondFont black-text text-contrast text-25" href="./views/talk/talk.php">Signales ton arrivée</a>';
         } else {
             $message = 'L\'email ou le pseudo sont déjà utilisés';
         }

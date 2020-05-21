@@ -6,26 +6,28 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../../../src/vendor/material_icons.css">
-    <link rel="stylesheet" href="../../../src/vendor/materialize.css">
+    <link rel="stylesheet" href="../../assets/css/app.css">
     <title>Administrateur</title>
 </head>
 <body>
     <main>
         <?php if ($_SESSION['auth'] == 'OK' && $_SESSION['user'] == 'Admin') { ?>
         <section class="row blue-grey darken-3 white-text z-depth-2">
-            <div class="col s2 m1 center-align">
+            <div class="col s3 center-align">
                 <form action="" method="post">
                     <button class="waves-effect waves-green btn-flat red-text" type="submit" name="disconnection">
                         Logout
                     </button>
                 </form>
             </div>
-            <div class="col s2 m1 center-align">
-                <a class="btn" href="../../index.php"><i class="material-icons">refresh</i></a>
+            <div class="col s3 center-align">
+                <a class="btn" href="./index.php"><i class="material-icons">refresh</i></a>
             </div>
-            <div class="col s2 m1 center-align">
+            <div class="col s3 center-align">
                 <a class="btn" href="../../index.php" target="_blank">Site</a>
+            </div>
+            <div class="col s3 center-align">
+                <a class="btn" href="./message.php">Messages</a>
             </div>
             <h1 class="col s12 center-align">Gestion des joueurs</h1>
         </section>
@@ -35,86 +37,44 @@
 
         <p class="row flow-text center-align red white-text z-depth-2"><?= $message ?></p>
 
-        <table class="striped responsive-table">
-            <thead class="blue-grey darken-3 white-text">
-            <tr>
-                <td>Nº</td>
-                <td>
-                    <label for="name">
-                        <input id="name" type="text" class="validate white-text" value="Nom" disabled>
-                    </label>
-                </td>
-                <td>
-                    <label for="fname">
-                        <input id="fname" type="text" class="validate white-text" value="Prénom" disabled>
-                    </label>
-                </td>
-                <td>
-                    <label for="pseudo">
-                        <input id="pseudo" type="text" class="validate white-text" value="Pseudo" disabled>
-                    </label>
-                </td>
-                <td>
-                    <label for="mail">
-                        <input id="mail" type="text" class="validate white-text" value="Mail" disabled>
-                    </label>
-                </td>
-                <td>
-                    <label for="phone">
-                        <input id="phone" type="text" class="validate white-text" value="Téléphone" disabled>
-                    </label>
-                </td>
-                <td class="flow-text center-align">
-                    Modifier
-                </td>
-                <td class="flow-text center-align">
-                    Supprimer
-                </td>
+            <div class="row">
+                <?php foreach ($tab as $row) { ?>
 
-            </tr>
-            </thead>
-
-            <tbody class="blue-grey lighten-4">
-            <?php
-                $i = 0;
-                foreach ($tab as $row) { ?>
-                <tr>
+                <div class="col s6 m4 l3">
                     <form action="" method="post">
-                        <td><?= ++$i ?></td>
-                        <td>
-                            <label for="nameInput">
-                                <input id="nameInput" type="text" class="validate" name="name" value="<?= $row->name ?>">
+                    <div class="card blue-grey darken-1">
+
+                        <div class="card-content white-text">
+                            <label for="nameInput<?= $row->id ?>">
+                                <input id="nameInput<?= $row->id ?>" type="text" class="validate" name="name" value="<?= $row->name ?>">
                             </label>
-                        </td>
-                        <td>
-                            <label for="fnameInput">
-                                <input id="fnameInput" type="text" class="validate" name="f_name" value="<?= $row->f_name ?>">
+
+                            <label for="fnameInput<?= $row->id ?>">
+                                <input id="fnameInput<?= $row->id ?>" type="text" class="validate" name="f_name" value="<?= $row->f_name ?>">
                             </label>
-                        </td>
-                        <td>
-                            <label for="pseudoInput">
-                                <input id="pseudoInput" type="text" class="validate" name="pseudo" value="<?= $row->pseudo ?>">
+
+                            <label for="pseudoInput<?= $row->id ?>">
+                                <input id="pseudoInput<?= $row->id ?>" type="text" class="validate" name="pseudo" value="<?= $row->pseudo ?>">
                             </label>
-                        </td>
-                        <td>
-                            <label for="mailInput">
-                                <input id="mailInput" type="email" class="validate" name="mail" value="<?= $row->mail ?>">
+
+                            <label for="mailInput<?= $row->id ?>">
+                                <input id="mailInput<?= $row->id ?>" type="email" class="validate" name="mail" value="<?= $row->mail ?>">
                             </label>
-                        </td>
-                        <td>
-                            <label for="phoneInput">
-                                <input id="phoneInput" type="text" class="validate" name="phone" value="<?= $row->phone ?>">
+
+                            <label for="phoneInput<?= $row->id ?>">
+                                <input id="phoneInput<?= $row->id ?>" type="text" class="validate" name="phone" value="<?= $row->phone ?>">
                             </label>
-                            <input type="hidden" name="id" value="<?= $row->id ?>">
-                        </td>
-                        <td>
-                            <button class="btn blue" type="submit" name="btnEdit">
+
+                            <input type="text" name="id" value="<?= $row->id ?>">
+                        </div>
+
+                        <div class="card-action center-align">
+                            <button class="btn-flat blue-text" type="submit" name="btnEdit">
                                 <i class="material-icons right">edit</i>
                             </button>
-                        </td>
-                        <td>
+
                             <!-- Modal Trigger -->
-                            <a class="waves-effect waves-light btn modal-trigger red" href="#modal<?= $row->id ?>">
+                            <a class="waves-effect waves-light btn-flat modal-trigger red-text" href="#modal<?= $row->id ?>">
                                 <i class="material-icons right">delete</i>
                             </a>
 
@@ -123,7 +83,7 @@
                                 <div class="modal-content center-align">
                                     <h4><?= $row->pseudo ?></h4>
                                     <p>Souhaites tu réellement supprimer <?= $row->f_name ?> <?= $row->name ?> ?</p>
-                                    <strong class="red-text">Cette action est irréverssible</strong>
+                                    <strong class="red-text">Cette action est irréverssible et supprimera tous ses messages dans le chat</strong>
                                 </div>
                                 <div class="modal-footer">
                                     <button class="waves-effect waves-green btn-flat red-text" type="submit" name="btnDelete">
@@ -132,12 +92,15 @@
                                     <a href="#!" class="modal-close waves-effect waves-green btn-flat">Annuler</a>
                                 </div>
                             </div>
-                        </td>
+                        </div>
+
+                    </div>
                     </form>
-                </tr>
-            <?php } ?>
-            </tbody>
-        </table>
+                </div>
+
+                <?php } ?>
+            </div>
+
         <?php }else{ ?>
             <h1 class="center-align">Zone réservé aux employés</h1>
 

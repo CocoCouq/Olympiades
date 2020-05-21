@@ -24,7 +24,7 @@ if (isset($_POST['btnDelete']) && !empty($_POST['id'])) {
     $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
 
     $players->deletePlayer($id);
-    $message = 'Suppression du joueur joueur';
+    $message = 'Suppression du joueur';
 }
 
 session_start();
@@ -40,8 +40,7 @@ if (isset($_POST['btnLogin']) && !empty($_POST['login']) && !empty($_POST['passw
 if (isset($_POST['disconnection'])) {
     unset($_SESSION['user']);
     unset($_SESSION['auth']);
-    if(ini_get("session.use_cookies"))
-    {
+    if(ini_get("session.use_cookies")) {
         setcookie(session_name(), '', time()-84600);
     }
     session_destroy();

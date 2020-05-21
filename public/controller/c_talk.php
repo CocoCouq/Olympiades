@@ -16,6 +16,7 @@ else {
 
     if (isset($_POST['sendMessage'])) {
         $newMessage = filter_input(INPUT_POST, 'newMessage', FILTER_SANITIZE_SPECIAL_CHARS);
+        $newMessage = str_replace('&#13;&#10;', '<br>', $newMessage);
 
         $messages->sendMessage($newMessage, $actualID);
     }

@@ -39,6 +39,14 @@ if (isset($_POST['btnLogin'])) {
         $login_message = 'Il faut renseigner l\'identifiant';
     }
 }
+else if (isset($_POST['disconnection'])) {
+        unset($_SESSION['login']);
+        unset($_SESSION['connected']);
+        if(ini_get("session.use_cookies")) {
+            setcookie(session_name(), '', time()-84600);
+        }
+        session_destroy();
+}
 
 if ($_SESSION['connected'] == 'OK') {
     $row_player = $player->getByLogin($_SESSION['login']);

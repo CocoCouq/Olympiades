@@ -82,11 +82,27 @@ class Player {
     // Delete player
     public function deletePlayer(int $id) :void
     {
-        $request_delete = 'DELETE FROM participants WHERE id = :id';
-        $result_delete = $this->db->prepare($request_delete);
-        $result_delete->bindParam(':id', $id);
-        $result_delete->execute();
-        $result_delete->closeCursor();
+        try {
+            $this->db->beginTransaction();
+
+            $request_message = 'DELETE FROM chat WHERE user_id = :id';
+            $result_message = $this->db->prepare($request_message);
+            $result_message->bindParam(':id', $id);
+            $result_message->execute();
+            $result_message->closeCursor();
+
+            $request_delete = 'DELETE FROM participants WHERE id = :id';
+            $result_delete = $this->db->prepare($request_delete);
+            $result_delete->bindParam(':id', $id);
+            $result_delete->execute();
+            $result_delete->closeCursor();
+
+            $this->db->commit();
+        }
+        catch (Exception $e) {
+            $this->db->rollBack();
+            var_dump($e->getMessage());
+        }
     }
 
     public function __destruct()
