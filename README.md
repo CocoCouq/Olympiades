@@ -12,11 +12,11 @@ TODO :
 - Check accessibility
 - Clear code
 
-####Admin :
+#### Admin :
 - Define Admin id (wysiwyg)
 - Clear code
 
-####Talk :
+#### Talk :
 - Verify with all devices
 - Check accessibility
 - Clear code
@@ -30,7 +30,7 @@ TODO :
 - Correction message error
 - Check accessibility 
 
-####CSS
+#### CSS
 - Separate with a global 'class file'
 ***
 ## Project setup
