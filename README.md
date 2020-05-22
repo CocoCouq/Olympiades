@@ -4,11 +4,11 @@
 
 TODO :
 -
-####Global : 
+#### Global : 
 - Choose fonts
 - Define date
 
-####Index :
+#### Index :
 - Check accessibility
 - Clear code
 
