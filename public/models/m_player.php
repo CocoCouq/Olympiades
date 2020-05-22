@@ -47,6 +47,18 @@ class Player {
         return $tab;
     }
 
+    // Five random citations
+    public function getFiveRand() : array
+    {
+        $request = 'SELECT id, name, f_name, description FROM participants ORDER BY RAND() LIMIT 5';
+        $result = $this->db->prepare($request);
+        $result->execute();
+        $tab = $result->fetchAll(PDO::FETCH_OBJ);
+        $result->closeCursor();
+
+        return $tab;
+    }
+
     // Add player
     public function addPlayer(array $array) :void
     {

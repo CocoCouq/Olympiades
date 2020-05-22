@@ -10,13 +10,49 @@
     <title>Olympiades</title>
 </head>
 <body>
+
+<style type="text/css">
+    .cookies{
+        bottom: -10px;
+        position: fixed;
+        height:80px;
+        background: rgba(59, 58, 58, 0.85);
+        width: 100%;
+        padding: 20px;
+        animation: animate-up .8s, fade-in 1s;
+    }
+
+    #closeCookies {
+        cursor: pointer;
+        background-color: transparent;
+        border: inherit;
+    }
+    .material-close {
+        background-color: rgba(191, 161, 16, 0.86);
+    }
+
+
+
+    @keyframes animate-up{
+        0% {
+            transform: translateY(70px);
+            animation-timing-function: cubic-bezier(.200, -.461, .355, 1.6);
+        }
+        100% {
+            transform: translateY(0);
+            animation-timing-function: cubic-bezier(.55, .055, .675, .1);
+        }
+    }
+</style>
+
 <header>
 <!--NAVIGATION BAR-->
 <div class="navbar-fixed">
     <nav class="gold-back">
         <div class="nav-wrapper row black-back">
             <a id="logo" href="" class="brand-logo left" title="Accueil"></a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger right" title="Menu"><i class="material-icons">menu</i></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger right hide-on-med-and-down" title="Menu"><i class="material-icons">menu</i></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger right show-on-medium-and-down" title="Menu"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <!--Proofs-->
                 <li>
@@ -52,7 +88,7 @@
             <div class="center-align secondFont text-20 col s12">be olympiades</div>
         </div>
     </li>
-    <li><a href="#" class="white-text" title="Accueil">Accueil<i class="material-icons white-text">home</i></a></li>
+    <li><a href="./index.php" class="white-text" title="Accueil">Accueil<i class="material-icons white-text">home</i></a></li>
     <li><a href="views/talk/talk.php" class="red-text" title="Trash Talk">Trash talk<i class="material-icons red-text">whatshot</i></a></li>
     <ul class="collapsible white-text">
         <li>
@@ -142,20 +178,26 @@
     <div class="ticker-news">
     <span>
 
-    <?php
-    $i = 0;
-    foreach ($tab as $row) {  ?>
-      <span><?= $tab_news[$i]->start.$row->f_name.' '.$row->name.$tab_news[$i++]->end ?></span><b class="red-text"> ||</b>
+    <?php foreach ($tab_final as $news) {  ?>
+      <span><?= $news ?></span><b class="red-text"> ||</b>
     <?php } ?>
-
-    </span>
     </div>
 </div>
+<!--COOKIES BANNER-->
+<?php if (!$_COOKIE['accept']) {?>
+<form action="" method="post">
+    <div class="cookies white-text valign-wrapper">
+        Afin de t'offrir une meilleure expérience de navigation, nous partons du principes que tu acceptes l'utilisation des cookies.
+        <button name="acceptCookies" class="circle" id="closeCookies"><i class="material-icons circle material-close">close</i></button>
+    </div>
+</form>
+<?php } ?>
+
 
 <footer class="white-text black-back hide-on-med-and-down">
     <div>
         © 2020 Olympic Society
-        <a class="black-text text-lighten-4 right" href="https://github.com/CocoCouq" target="_blank" title="Auteur">Code Source</a>
+        <a class="black-text text-lighten-4 right" href="https://github.com/CocoCouq/Olympiades" target="_blank" title="Auteur">Code Source</a>
     </div>
 </footer>
 

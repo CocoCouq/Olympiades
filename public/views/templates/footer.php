@@ -1,7 +1,7 @@
 <footer class="white-text black-back hide-on-med-and-down">
     <div>
         © 2020 Olympic Society
-        <a class="black-text text-lighten-4 right" href="#GitHubCoco">Code Source</a>
+        <a class="black-text text-lighten-4 right" href="https://github.com/CocoCouq/Olympiades">Code Source</a>
     </div>
 </footer>
 

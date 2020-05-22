@@ -51,7 +51,7 @@
             <div class="center-align secondFont text-20 col s12">be olympiades</div>
         </div>
     </li>
-    <li><a href="#" class="white-text" title="Accueil">Accueil<i class="material-icons white-text">home</i></a></li>
+    <li><a href="../../index.php" class="white-text" title="Accueil">Accueil<i class="material-icons white-text">home</i></a></li>
     <li><a href="../../views/talk/talk.php" class="red-text" title="Trash Talk">Trash talk<i class="material-icons red-text">whatshot</i></a></li>
     <ul class="collapsible white-text">
         <li>
