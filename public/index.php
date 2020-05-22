@@ -10,41 +10,6 @@
     <title>Olympiades</title>
 </head>
 <body>
-
-<style type="text/css">
-    .cookies{
-        bottom: -10px;
-        position: fixed;
-        height:80px;
-        background: rgba(59, 58, 58, 0.85);
-        width: 100%;
-        padding: 20px;
-        animation: animate-up .8s, fade-in 1s;
-    }
-
-    #closeCookies {
-        cursor: pointer;
-        background-color: transparent;
-        border: inherit;
-    }
-    .material-close {
-        background-color: rgba(191, 161, 16, 0.86);
-    }
-
-
-
-    @keyframes animate-up{
-        0% {
-            transform: translateY(70px);
-            animation-timing-function: cubic-bezier(.200, -.461, .355, 1.6);
-        }
-        100% {
-            transform: translateY(0);
-            animation-timing-function: cubic-bezier(.55, .055, .675, .1);
-        }
-    }
-</style>
-
 <header>
 <!--NAVIGATION BAR-->
 <div class="navbar-fixed">
@@ -56,14 +21,14 @@
             <ul class="right hide-on-med-and-down">
                 <!--Proofs-->
                 <li>
-                    <a class='dropdown-trigger text-20' href='#' data-target='dropdownProof' title="">Epreuves</a>
-
+                    <a class='dropdown-trigger text-20' href='#' data-target='dropdownProof' title="Voir les épreuves">Epreuves</a>
+                    <!--Links proofs-->
                     <ul id='dropdownProof' class='dropdown-content'>
                         <li><a href="views/proofs/chartes.php" title="Fair-Play">Fair-Play</a></li>
                         <li class="divider"></li>
-                        <li><a href="views/proofs/beer.php" title="Beer-Pong">Beer-Pong</a></li>
-                        <li><a href="views/proofs/corn.php" title="Cornhole">Cornhole</a></li>
-                        <li><a href="views/proofs/flip.php" title="Flip Cup">Flip cup</a></li>
+                        <li><a href="./views/proofs/beer.php" title="Beer-Pong">Beer-Pong</a></li>
+                        <li><a href="./views/proofs/corn.php" title="Cornhole">Cornhole</a></li>
+                        <li><a href="./views/proofs/flip.php" title="Flip Cup">Flip cup</a></li>
                     </ul>
                 </li>
                 <li>
@@ -85,7 +50,7 @@
         <div class="row">
             <img class="responsive-img col s6 offset-s3 circle" src="assets/images/globals/logo_brut.png" alt="Les Olympiades">
 
-            <div class="center-align secondFont text-20 col s12">be olympiades</div>
+            <div class="center-align secondFont text-30 col s12">be olympiades</div>
         </div>
     </li>
     <li><a href="./index.php" class="white-text" title="Accueil">Accueil<i class="material-icons white-text">home</i></a></li>
