@@ -1,10 +1,10 @@
-<footer class="white-text black-back hide-on-med-and-down">
-    <div>
-        © 2020 Olympic Society
-        <a class="black-text text-lighten-4 right" href="https://github.com/CocoCouq/Olympiades">Code Source</a>
-    </div>
-</footer>
+        <footer class="white-text black-back hide-on-med-and-down">
+            <div>
+                © 2020 Olympic Society
+                <a class="black-text text-lighten-4 right" href="https://github.com/CocoCouq/Olympiades" title="Auteur">Code Source</a>
+            </div>
+        </footer>
 
-<script src="../../assets/js/app.js"></script>
-</body>
+        <script src="../../assets/js/app.js"></script>
+    </body>
 </html>

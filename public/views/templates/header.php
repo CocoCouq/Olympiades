@@ -19,7 +19,7 @@
                 <ul class="right hide-on-med-and-down">
                     <!--Proofs-->
                     <li>
-                        <a class='dropdown-trigger text-20' href='#' data-target='dropdownProof' title="">Epreuves</a>
+                        <a class='dropdown-trigger text-20' href='#' data-target='dropdownProof' title="Toutes les epreuves">Epreuves</a>
 
                         <ul id='dropdownProof' class='dropdown-content'>
                             <li><a href="../proofs/chartes.php" title="Fair-Play">Fair-Play</a></li>
