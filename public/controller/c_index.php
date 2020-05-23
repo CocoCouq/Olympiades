@@ -1,6 +1,7 @@
 <?php
-require_once 'models/m_player.php';
-require_once 'models/m_news.php';
+require_once './models/m_player.php';
+require_once './models/m_news.php';
+session_start();
 
 if (!$_COOKIE['accept'] && isset($_POST['acceptCookies'])) {
     setcookie('accept', true);
@@ -30,7 +31,6 @@ if (isset($_POST['btnAddPlayer']) && !empty($_POST['name']) && !empty($_POST['f_
 
         if ($count == 0) {
             $players->addPlayer($array);
-            session_start();
             $_SESSION['login'] = $array[':pseudo'];
             $_SESSION['connected'] = 'OK';
             session_regenerate_id();
@@ -40,10 +40,9 @@ if (isset($_POST['btnAddPlayer']) && !empty($_POST['name']) && !empty($_POST['f_
         }
     }
     else {
-        $message = 'Les mot de passe ne correspondent pas ou ne font pas au moins 8 caractères';
+        $message = 'Les mots de passe ne correspondent pas ou ne font pas au moins 8 caractères';
     }
 }
-
 
 $tab = $players->getLastSubscription();
 $tab_news = $news->getFiveRand();
@@ -52,7 +51,7 @@ $tab_final = [];
 $i = 0; $j = 0;
 
 foreach ($tab as $player) {
-    $tab_final[$i] = $tab_news[$i]->start.$player->f_name.' '.$player->name.$tab_news[$i++]->end;
+    $tab_final[$i] = $tab_news[$i]->start.$player->f_name.' '.$player->name.$tab_news[$i]->end;
     $i++;
 }
 foreach ($tab_citations as $citation) {
@@ -60,9 +59,9 @@ foreach ($tab_citations as $citation) {
     $i++;
 }
 
-shuffle($tab_final);
+shuffle($tab_final)
+;
 $limit = 20;
-while (count($tab_final) < $limit) {
+while (count($tab_final) < $limit)
     $tab_final[$i++] = $tab_final[$j++];
-}
 

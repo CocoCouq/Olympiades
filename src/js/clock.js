@@ -1,8 +1,8 @@
 // Clock
-function writeTime() {
+function timer() {
     let time = Math.trunc(new Date().getTime() / 1000)
-    let d_day = Math.trunc(new Date('08/21/2020').getTime() / 1000)
-    let diff = d_day - time
+    let d_day = Math.trunc(new Date('07/21/2020').getTime() / 1000)
+    let diff = d_day - time > 0 ? d_day - time : 0;
     let seconds = diff % 60
     let minutesSup = Math.trunc(diff / 60)
     let minutes = minutesSup % 60
@@ -24,7 +24,7 @@ function writeTime() {
     document.getElementById('clock7').innerText = tabSec[0]
     document.getElementById('clock8').innerText = tabSec[1]
 
-    window.setTimeout("writeTime()", 999);
+    window.setTimeout("timer()", 999);
 }
 
 function getByTen(number) {
@@ -34,4 +34,4 @@ function getByTen(number) {
     return tab
 }
 
-writeTime();
+timer()

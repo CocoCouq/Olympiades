@@ -1,8 +1,9 @@
 <?php include_once '../templates/header.php' ?>
+<?php include_once './proofs_navigation.php' ?>
 
 
 <main>
-    <h1 class="firstFont center-align">Flip-Cup</h1>
+    <h1 class="secondFont text-5 center-align">Flip-Cup</h1>
 
     <div class="row">
 
@@ -22,20 +23,19 @@
         <iframe class="col s12 border-gold black-back"
                 width="653" height="367"
                 src="https://www.youtube.com/embed/1EXQFPn0x2c"
-                frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
         >
         </iframe>
 
         <div class="col s12 black-back border-gold">
-            <h2 class="center-align secondFont text-30 white-text">et tu bois</h2>
-            <p class="white-text">
-            <ul class="white-text">
-                <li>Lorsque c'est ton tour de jouer de la pichenette</li>
-                <li>Le nombre de goblets restant à l'équipe adverse</li>
-            </ul>
-            </p>
+            <h2 class="center-align secondFont text-30 white-text">Et tu bois</h2>
+            <div class="white-text">
+                <ul class="white-text">
+                    <li>Lorsque c'est ton tour de jouer de la pichenette</li>
+                    <li>Le nombre de goblets restant à l'équipe adverse</li>
+                </ul>
+            </div>
         </div>
         <div class="col s12 black-back border-gold center-align">
             <p class="white-text center-align">La première équipe qui finie son tour</p>
@@ -54,7 +54,7 @@
             </div>
             <div class="divider"></div>
             <div>
-                <p class="text-25 secondFont white-text">pénalités</p>
+                <p class="text-25 secondFont white-text">Pénalités</p>
                 <p class="white-text justify-text">
                     Bien évidemment tout entrave au Fair-Play sera sanctionnait comme mentionné dans la Chartes de Bonne Conduite :
                     <a href="chartes.php">ici</a> pour ceux qui ne l'auraient pas lu

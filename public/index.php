@@ -21,7 +21,7 @@
             <ul class="right hide-on-med-and-down">
                 <!--Proofs-->
                 <li>
-                    <a class='dropdown-trigger text-20' href='#' data-target='dropdownProof' title="Voir les épreuves">Epreuves</a>
+                    <a class='dropdown-trigger text-20 dropNav' href='#' data-target='dropdownProof' title="Voir les épreuves">Epreuves</a>
                     <!--Links proofs-->
                     <ul id='dropdownProof' class='dropdown-content'>
                         <li><a href="views/proofs/chartes.php" title="Fair-Play">Fair-Play</a></li>
@@ -109,7 +109,16 @@
                     </div>
                     <!--FORM SUBSCRIPTION-->
                     <div class="center-align section">
-                        <a id="button-inscription" class="btn-large secondFont text-30 z-depth-5" href="views/login/subscribe.php" title="Inscris toi">Inscription</a>
+                        <?php if ($_SESSION['connected'] == 'OK') { ?>
+                            <a id="button-talk" class="btn-large secondFont text-30 yellow-text z-depth-5" href="./views/talk/talk.php" title="Trash Talk"><i class="material-icons red-text">whatshot</i> Trash Talk <i class="material-icons red-text">whatshot</i></a>
+                        <?php } else {?>
+                            <div class="section">
+                                <a id="button-inscription" class="btn-large secondFont text-30 z-depth-5" href="./views/login/subscribe.php" title="Inscris toi">Inscription</a>
+                            </div>
+                            <div>
+                                <a class="btn-small black-back secondFont" href="./views/login/login.php" title="Se connecter">Déjà inscrit</a>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

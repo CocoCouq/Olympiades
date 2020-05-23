@@ -267,6 +267,7 @@ blockquote {
 .authorMessage {
     padding: 3px !important;
 }
+
 #playersLine {
     width: 100vw;
     overflow: auto;
@@ -280,4 +281,68 @@ blockquote {
 }
 .text-2 {
     font-size: 2vh;
+}
+
+.cookies{
+    bottom: -10px;
+    position: fixed;
+    height:80px;
+    background: rgba(59, 58, 58, 0.85);
+    width: 100%;
+    padding: 20px;
+    animation: animate-up .8s, fade-in 1s;
+}
+
+#closeCookies {
+    cursor: pointer;
+    background-color: transparent;
+    border: inherit;
+}
+.material-close {
+    background-color: rgba(191, 161, 16, 0.86);
+}
+
+
+
+@keyframes animate-up{
+    0% {
+        transform: translateY(70px);
+        animation-timing-function: cubic-bezier(.200, -.461, .355, 1.6);
+    }
+    100% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(.55, .055, .675, .1);
+    }
+}
+
+.fixed-action-btn {
+    bottom: inherit;
+    top: 55px;
+    left: inherit;
+    right: 5px;
+}
+
+
+
+#proofsMenu {
+    position: fixed;
+    margin-top: 65px;
+    margin-left: 5px;
+    z-index: 2;
+}
+#dropdown1 {
+    z-index: 1;
+}
+
+#button-talk {
+    border: rgba(253, 139, 51, 0.81) 1px inset;
+    background: linear-gradient(125deg, rgba(0, 0, 0, 0.6), rgba(62, 62, 62, 0.6), rgba(146, 146, 146, 0.6));
+}
+
+#button-talk:hover {
+    background: linear-gradient(125deg, rgba(0, 0, 0, 0.6), rgba(50, 50, 50, 0.65), rgba(109, 109, 109, 0.75));
+}
+
+#button-talk:active {
+    background: linear-gradient(125deg, rgba(0, 0, 0, 0.7), rgba(57, 57, 57, 0.65), rgba(118, 118, 118, 0.6));
 }

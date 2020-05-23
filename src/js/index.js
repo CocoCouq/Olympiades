@@ -2,9 +2,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     let sidenav = document.querySelectorAll('.sidenav')
     M.Sidenav.init(sidenav)
-    let drop = document.querySelectorAll('.dropdown-trigger')
-    M.Dropdown.init(drop, {
+    let dropNav = document.querySelectorAll('.dropNav')
+    M.Dropdown.init(dropNav, {
         hover: true
+    })
+    let dropProofs = document.querySelectorAll('.dropProofs')
+    M.Dropdown.init(dropProofs, {
+        coverTrigger: false,
+        onOpenStart: startDropProofs,
+        onCloseStart: closeDropProofs
     })
     let collapse = document.querySelectorAll('.collapsible')
     M.Collapsible.init(collapse)
@@ -24,4 +30,12 @@ if (document.getElementById('fakeSubmit')) {
         document.getElementById('name').value = ""
         document.getElementById('textarea').value = ""
     })
+}
+
+function startDropProofs() {
+    document.getElementById('arrowProofs').textContent = 'close'
+}
+
+function closeDropProofs() {
+    document.getElementById('arrowProofs').textContent = 'arrow_downward'
 }

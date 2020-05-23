@@ -7,31 +7,19 @@ TODO :
 #### Global : 
 - Choose fonts
 - Define date
-
-#### Index :
-- Check accessibility
-- Clear code
+- Accessibility
 
 #### Admin :
-- Define Admin id (wysiwyg)
 - Clear code
 
 #### Talk :
-- Verify with all devices
-- Check accessibility
-- Clear code
-
-#### Proofs
-- Floating action button to navigate
-- Clear code
-- Check accessibility 
-
-#### Form
-- Correction message error
-- Check accessibility 
+- Verify with android 
 
 #### CSS
 - Separate with a global 'class file'
+
+#### CONTROLLERS
+- Rename folder
 ***
 ## Project setup
 ### Install Node.js et npm

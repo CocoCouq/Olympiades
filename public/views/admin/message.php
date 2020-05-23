@@ -36,10 +36,26 @@
             </div>
         </form>
 
-
+    <div class="blue-grey darken-4 section">
     <?php foreach ($tab as $row) { ?>
         <form action="" method="post">
             <div class="row black-text">
+
+                <?php if ($row->pseudo == 'Olympiades') { ?>
+                    <div class="message black-back lighten-2 left row z-depth-5 col s11">
+                        <div class="col s10 offset-s1 margin-t-15">
+                            <div class="center-align">
+                                <span class="gold-back secondFont text-contrast text-20 card authorMessage">
+                                    <i class="tiny material-icons">grade</i> OLYMPIADES <i class="tiny material-icons circle">grade</i>
+                                </span>
+                            </div>
+                            <p><?= $row->message ?></p>
+                            <small class="grey-text text-lighten-1 right"><?= $row->send_date ?></small>
+                            <input type="hidden" name="hiddenID" value="<?= $row->messageID ?>">
+                            <button name="deleteMessage" type="submit" class="col s1 btn-flat"><i class="material-icons red-text">delete</i></button>
+                        </div>
+                    </div>
+                <?php } else {?>
                 <div class="message left row z-depth-5 col s11">
                     <div class="col s10 offset-s1 margin-t-15">
                         <span class="gold-back secondFont text-contrast text-20 card authorMessage"><?= $row->pseudo ?></span>
@@ -49,14 +65,19 @@
                         <button name="deleteMessage" type="submit" class="col s1 btn-flat"><i class="material-icons red-text">delete</i></button>
                     </div>
                 </div>
+                <?php } ?>
+
             </div>
         </form>
     <?php } ?>
+    </div>
 </main>
 <script src="https://cdn.tiny.cloud/1/0u8l0putpzzp19wlerho1tqj5qj2sxqiynfhxw0ywtnalv6o/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 <script type="text/javascript">
     tinymce.init({
         selector: 'textarea',
+        skin: 'oxide-dark',
+        content_css: 'dark',
         plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
         toolbar: 'undo redo | fontsizeselect | forecolor | bold italic | alignleft aligncenter alignright alignjustify | text',
         menubar: ''

@@ -1,8 +1,9 @@
 <?php include_once '../templates/header.php' ?>
+<?php include_once './proofs_navigation.php' ?>
 
 
 <main>
-    <h1 class="firstFont center-align">Cornhole</h1>
+    <h1 class="secondFont text-5 center-align">Cornhole</h1>
 
     <div class="row">
 
@@ -23,7 +24,7 @@
             <img class="responsive-img" src="../../assets/images/proofs/corn.gif" alt="">
         </div>
         <div class="col s12 black-back border-gold">
-            <h2 class="center-align secondFont text-30 white-text">et tu bois</h2>
+            <h2 class="center-align secondFont text-30 white-text">Et tu bois</h2>
             <p class="white-text">
             <ul class="white-text">
                 <li>1 fois si tu mors la ligne</li>
@@ -39,23 +40,23 @@
         </div>
         <div class="col s12 black-back border-gold">
             <div>
-                <p class="text-25 secondFont white-text">marquer un point</p>
+                <p class="text-25 secondFont white-text">Marquer un point</p>
                 <p class="white-text justify-text">
                     Pour marquer des points vous devez lancer vos sacs sur la planche située en face de vous :
                 </p>
-                <p class="justify-text">
-                <ul class="white-text">
-                    <li>Sac sur la planche : 1 point</li>
-                    <li>Sac dans le trou : 3 points</li>
-                    <li>Extérieur de la planche : 0 point</li>
-                </ul>
-                </p>
+                <div class="justify-text">
+                    <ul class="white-text">
+                        <li>Sac sur la planche : 1 point</li>
+                        <li>Sac dans le trou : 3 points</li>
+                        <li>Extérieur de la planche : 0 point</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="divider"></div>
 
             <div>
-                <p class="text-25 secondFont white-text">déroulement</p>
+                <p class="text-25 secondFont white-text">Déroulement</p>
                 <p class="white-text justify-text">
                     Lancez chacun votre tour un sac en visant la planche et ainsi de suite jusqu'à ce que tous les sacs aient été lancés
                 </p>

@@ -28,8 +28,9 @@ if (isset($_POST['btnDelete']) && !empty($_POST['id'])) {
 }
 
 session_start();
-if (isset($_POST['btnLogin']) && !empty($_POST['login']) && !empty($_POST['password'])) {
-    if (password_verify($_POST['password'], '$2y$10$Q7r1qxwqRrr856Ik6Ysu8.ahjQeGatfhkx.TsH5AMGAhXTGMXImZ.')) {
+if (isset($_POST['btnLogin']) && ($_POST['login'] == 'Admin') && !empty($_POST['password'])) {
+    $admin = $players->getByLogin('Olympiades');
+    if (password_verify($_POST['password'], $admin->password)) {
         if ($_POST['login'] = 'Admin') {
             $_SESSION['auth'] = 'OK';
             $_SESSION['user'] = $_POST['login'];
