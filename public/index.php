@@ -1,4 +1,4 @@
-<?php include_once 'controller/c_index.php' ?>
+<?php include_once 'controllers/c_index.php' ?>
 <!doctype html>
 <html lang="fr">
 <head>

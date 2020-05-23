@@ -1,0 +1,19 @@
+/*ID*/
+#proofsMenu {
+    position: fixed;
+    margin-top: 65px;
+    margin-left: 5px;
+    z-index: 2;
+}
+
+#dropdown1 {
+    z-index: 1;
+}
+
+/*CLASSES*/
+.fixed-action-btn {
+    bottom: inherit;
+    top: 55px;
+    left: inherit;
+    right: 5px;
+}

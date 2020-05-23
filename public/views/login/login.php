@@ -1,4 +1,4 @@
-<?php include_once '../../controller/c_login.php' ?>
+<?php include_once '../../controllers/c_login.php' ?>
 <?php include_once '../templates/header.php' ?>
 
 <main>

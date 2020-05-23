@@ -1,4 +1,4 @@
-<?php include_once '../../controller/c_admin_message.php' ?>
+<?php include_once '../../controllers/c_admin_message.php' ?>
 <!doctype html>
 <html lang="fr">
 <head>

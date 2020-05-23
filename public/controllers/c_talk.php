@@ -24,5 +24,3 @@ else {
     // Messages list
     $messagesList= $messages->getAll();
 }
-
-

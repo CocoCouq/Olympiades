@@ -1,0 +1,136 @@
+/*FONT*/
+.firstFont {
+    font-family: serif;
+}
+
+.secondFont {
+    font-family: 'Robo', sans-serif;
+}
+
+.thirdFont {
+    font-family: 'Alarm', sans-serif;
+}
+
+/*BACKGROUND*/
+.whiteTransparent {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.black-back {
+    background-color: rgba(10,14,16,0.85) !important;
+}
+
+.gold-back {
+    background: url(../images/styles/gold.jpg) no-repeat center;
+    background-size: cover;
+}
+
+/*BORDER*/
+.border-gold {
+    border: 3px solid;
+    border-image: url("../images/styles/gold.jpg") 1 1 round;
+}
+
+.border-gold-round {
+    border: solid 3px transparent;
+    border-radius: 80px;
+    background-image: linear-gradient(white, white), url("../images/styles/gold.jpg");
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.border-2 {
+    border-radius: 2px;
+}
+
+.border-b-2 {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.border-t-2 {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.border-5 {
+    border-radius: 5px;
+}
+
+.border-b-5 {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.border-t-5 {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.shadow-top {
+    border-top: rgba(17,17,17,0.5) 2px inset;
+}
+
+/*TEXT*/
+.bigText {
+    font-size: 4vw;
+}
+
+.titleText {
+    font-size: 5vw;
+    font-min-size: 30px;
+}
+
+.text-contrast {
+    text-shadow: white 0 0 3px, 1px 1px whitesmoke;
+}
+
+.text-25 {
+    font-size: 25px;
+}
+
+.text-20 {
+    font-size: 20px;
+}
+
+.text-30 {
+    font-size: 30px;
+}
+
+.text-5 {
+    font-size: 5vh;
+}
+
+.text-2 {
+    font-size: 2vh;
+}
+
+.justify-text {
+    text-align: justify;
+}
+
+/*MARGIN-PADDING*/
+.margin-t-20 {
+    margin-top: 20px !important;
+}
+
+.margin-t-15 {
+    margin-top: 15px !important;
+}
+
+.margin-b-10 {
+    margin-bottom: 10px;
+}
+
+.margin-b-d10 {
+    margin-bottom: -10px !important;
+}
+
+/*GRID*/
+
+.min-500 {
+    min-height: 130px;
+    max-height: 130px;
+}
+
+

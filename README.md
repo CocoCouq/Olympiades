@@ -7,7 +7,6 @@ TODO :
 #### Global : 
 - Choose fonts
 - Define date
-- Accessibility
 
 #### Admin :
 - Clear code
@@ -15,11 +14,6 @@ TODO :
 #### Talk :
 - Verify with android 
 
-#### CSS
-- Separate with a global 'class file'
-
-#### CONTROLLERS
-- Rename folder
 ***
 ## Project setup
 ### Install Node.js et npm

@@ -1,0 +1,57 @@
+/*ID*/
+#indexLogo {
+    height: 180px;
+    width: auto;
+}
+
+#indexImage {
+    height: 60vh !important;
+    background-image: url('../images/styles/image1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#filter-grey {
+    height: 60vh;
+    background-color: rgba(50, 52, 52, 0.65);
+}
+
+#clock {
+    display: flex;
+    flex-direction: row;
+}
+
+#button-inscription {
+    border: rgba(253, 139, 51, 0.81) 1px inset;
+    background: linear-gradient(125deg, rgba(166, 63, 63, 0.60), rgba(246, 152, 38, 0.6), rgba(250, 233, 179, 0.6));
+}
+
+#button-inscription:hover {
+    background-color: rgba(198,173,0,0.75);
+}
+
+#button-inscription:active {
+    background-color: rgba(12, 46, 62, 0.82);
+}
+
+#button-talk {
+    border: rgba(253, 139, 51, 0.81) 1px inset;
+    background: linear-gradient(125deg, rgba(0, 0, 0, 0.6), rgba(62, 62, 62, 0.6), rgba(146, 146, 146, 0.6));
+}
+
+#button-talk:hover {
+    background: linear-gradient(125deg, rgba(0, 0, 0, 0.6), rgba(50, 50, 50, 0.65), rgba(109, 109, 109, 0.75));
+}
+
+#button-talk:active {
+    background: linear-gradient(125deg, rgba(0, 0, 0, 0.7), rgba(57, 57, 57, 0.65), rgba(118, 118, 118, 0.6));
+}
+
+/*CLASSES*/
+.oneElven {
+    width: 9vw;
+}
+
+.clockNumbers {
+    margin: 0.09vw;
+}
