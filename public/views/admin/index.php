@@ -27,7 +27,7 @@
                 <a class="btn" href="../../index.php" target="_blank">Site</a>
             </div>
             <div class="col s3 center-align">
-                <a class="btn" href="./message.php">Messages</a>
+                <a class="btn" href="./message.php"><i class="material-icons">mail</i></a>
             </div>
             <h1 class="col s12 center-align">Gestion des joueurs</h1>
         </section>
@@ -37,6 +37,20 @@
 
         <p class="row flow-text center-align red white-text z-depth-2"><?= $message ?></p>
 
+            <div class="container center-align">
+                <div>
+                    <a
+                        href="mailto:<?php foreach ($tab as $user) { ?><?= $user->id != 1 ? $user->mail.',' : '' ?><?php } ?>?subject=OLYMPIADES%20:%20INFORMATIONS"
+                        target="blank"
+                        class="btn"
+                    >
+                        Mail groupé
+                    </a>
+                    <button class="btn" id="copyNum">
+                        Copier les 06
+                    </button>
+                </div>
+            </div>
             <div class="row">
                 <?php foreach ($tab as $row) { ?>
 
@@ -99,6 +113,7 @@
                 </div>
 
                 <?php } ?>
+                <textarea id="toCopy"><?php foreach ($tab as $user) { ?><?= $user->id != 1 ? $user->phone.',' : '' ?><?php } ?></textarea>
             </div>
 
         <?php }else{ ?>

@@ -12,14 +12,20 @@
 <body>
 <main>
     <section class="row blue-grey darken-3 white-text z-depth-2">
-
-        <div class="col s4 m3 center-align">
+        <div class="col s3 center-align">
+            <form action="./index.php" method="post">
+                <button class="waves-effect waves-green btn-flat red-text" type="submit" name="disconnection">
+                    Logout
+                </button>
+            </form>
+        </div>
+        <div class="col s3 center-align">
             <a class="btn" href="./message.php"><i class="material-icons">refresh</i></a>
         </div>
-        <div class="col s4 m3 center-align">
+        <div class="col s3 center-align">
             <a class="btn" href="../talk/talk.php" target="_blank">chat</a>
         </div>
-        <div class="col s4 m3 center-align">
+        <div class="col s3 center-align">
             <a class="btn" href="./index.php">Retour</a>
         </div>
 

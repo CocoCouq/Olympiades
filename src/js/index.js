@@ -39,3 +39,16 @@ function startDropProofs() {
 function closeDropProofs() {
     document.getElementById('arrowProofs').textContent = 'arrow_downward'
 }
+
+// ADMIN COPY NUMBERS
+if (document.getElementById('copyNum')) {
+    const btnCopy = document.getElementById('copyNum')
+    btnCopy.addEventListener('click', function () {
+        let toCopy = document.getElementById('toCopy')
+        toCopy.select()
+        if (document.execCommand('copy')) {
+            btnCopy.classList.add('blue')
+            btnCopy.innerHTML = '<i class="material-icons">content_copy</i>COPIÉ !'
+        }
+    })
+}

@@ -35,3 +35,8 @@ function getByTen(number) {
 }
 
 timer()
+
+const whatIsIt = function whatIsIt() {
+    alert('Tu copierais n\'importe quoi, t\'es un gland')
+}
+
