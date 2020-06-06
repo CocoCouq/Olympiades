@@ -1,7 +1,7 @@
 // Clock
 function timer() {
     let time = Math.trunc(new Date().getTime() / 1000)
-    let d_day = Math.trunc(new Date('07/21/2020').getTime() / 1000)
+    let d_day = Math.trunc(new Date('07/25/2020').getTime() / 1000)
     let diff = d_day - time > 0 ? d_day - time : 0;
     let seconds = diff % 60
     let minutesSup = Math.trunc(diff / 60)

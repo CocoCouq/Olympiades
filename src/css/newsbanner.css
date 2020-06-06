@@ -25,11 +25,11 @@
     width: 2500px;
     margin-top: 5px;
     padding-bottom: 5px;
-    color: #087893;
+    color: #6a6868;
     font-size: 15px;
     text-transform: uppercase;
-    text-shadow: 0 0 2px #065b70;
-    background: linear-gradient(135deg, #0e2e42 0%, #11374e 11%, #123b53 24%, #144561 30%, #2793e8 68%);
+    text-shadow: 0 0 2px #6d4406;
+    background: linear-gradient(135deg, #42200e 0%, #4e3111 11%, #634613 24%);
     /* W3C */
 }
 
@@ -68,7 +68,7 @@
     font-size: 20px;
     text-transform: uppercase;
     text-shadow: 0 0 5px black;
-    background: linear-gradient(135deg, #0e2e42 0%, #11374e 11%, #123b53 29%);
+    background: linear-gradient(135deg, #553112 0%, #894112 11%, #cba52e 29%);
     /* W3C */
     overflow: hidden;
     white-space: nowrap;

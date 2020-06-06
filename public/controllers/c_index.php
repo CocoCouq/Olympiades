@@ -1,13 +1,13 @@
 <?php
 require_once './models/m_player.php';
 require_once './models/m_news.php';
+
 session_start();
 
 if (!$_COOKIE['accept'] && isset($_POST['acceptCookies'])) {
     setcookie('accept', true);
     header('location:./index.php');
 }
-
 $message = '';
 $players = new Player();
 $news = new News();

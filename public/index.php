@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="assets/images/globals/logo_brut.png">
+    <link rel="shortcut icon" href="assets/images/globals/favicon.png">
     <link rel="stylesheet" href="assets/css/app.css">
     <title>Olympiades</title>
 </head>
@@ -15,20 +15,24 @@
 <div class="navbar-fixed">
     <nav class="gold-back">
         <div class="nav-wrapper row black-back">
-            <a id="logo" href="" class="brand-logo left" title="Accueil"></a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger right hide-on-med-and-down" title="Menu"><i class="material-icons">menu</i></a>
+            <a id="logo" href="" class="brand-logo left border-gold hide-on-med-and-up" title="Accueil"></a>
+            <a id="logoLarge" href="" class="brand-logo left hide-on-small-only col m1" title="Accueil">
+                <img class="responsive-img border-gold" src="./assets/images/globals/logo_brut.png" alt="Be All in">
+            </a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right show-on-medium-and-down" title="Menu"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <!--Proofs-->
                 <li>
                     <a class='dropdown-trigger text-20 dropNav' href='#' data-target='dropdownProof' title="Voir les épreuves">Epreuves</a>
                     <!--Links proofs-->
-                    <ul id='dropdownProof' class='dropdown-content'>
-                        <li><a href="views/proofs/chartes.php" title="Fair-Play">Fair-Play</a></li>
+                    <ul id='dropdownProof' class='dropdown-content border-gold gold-back'>
+                        <li class="gold-back"><a class="gold-back black-text text-contrast" href="views/proofs/chartes.php" title="Fair-Play">Fair-Play</a></li>
                         <li class="divider"></li>
-                        <li><a href="./views/proofs/beer.php" title="Beer-Pong">Beer-Pong</a></li>
-                        <li><a href="./views/proofs/corn.php" title="Cornhole">Cornhole</a></li>
-                        <li><a href="./views/proofs/flip.php" title="Flip Cup">Flip cup</a></li>
+                        <div class="gold-back">
+                        <li><a class="black-text text-contrast" href="./views/proofs/beer.php" title="Beer-Pong">Beer-Pong</a></li>
+                        <li><a class="black-text text-contrast" href="./views/proofs/corn.php" title="Cornhole">Cornhole</a></li>
+                        <li><a class="black-text text-contrast" href="./views/proofs/flip.php" title="Flip Cup">Flip cup</a></li>
+                        </div>
                     </ul>
                 </li>
                 <li>
@@ -79,6 +83,7 @@
 </ul>
 <main>
 
+
     <!--TIMER-->
     <h1 class="center-align secondFont text-25">Début des hostilités dans :</h1>
 
@@ -97,16 +102,11 @@
     </div>
 
     <!--SUBSCRIBE MESSAGE-->
-    <div class="center-align text-25 card red white-text"><?= $message ?></div>
+    <div id="subscribeBannerMessage" class="center-align text-25"><?= $message ?></div>
 
     <section id="indexImage">
             <div id="filter-grey" class="white-text valign-wrapper row">
                 <div class="col s12">
-                    <div class="center-align">
-
-                        <img id="indexLogo" src="assets/images/globals/logo_brut.png" alt="Logo" class="responsive-img border-gold">
-
-                    </div>
                     <!--FORM SUBSCRIPTION-->
                     <div class="center-align section">
                         <?php if ($_SESSION['connected'] == 'OK') { ?>
@@ -116,7 +116,7 @@
                                 <a id="button-inscription" class="btn-large secondFont text-30 z-depth-5" href="./views/login/subscribe.php" title="Inscris toi">Inscription</a>
                             </div>
                             <div>
-                                <a class="btn-small black-back secondFont" href="./views/login/login.php" title="Se connecter">Déjà inscrit</a>
+                                <a class="btn-small text-20 gold-back secondFont black-text text-contrast" href="./views/login/login.php" title="Se connecter">Déjà inscrit</a>
                             </div>
                         <?php } ?>
                     </div>
@@ -128,12 +128,12 @@
 
 <!--BREAKING NEWS-->
 <div class="ticker section" role="complementary">
-    <div class="ticker-tip">
-        <div class="ticker-tip-info valign-wrapper">
-            <i class ="material-icons circle z-depth-5">info</i>
-            <span>    DERNIERE MINUTES<span>
-        </div>
-    </div>
+<!--    <div class="ticker-tip">-->
+<!--        <div class="ticker-tip-info valign-wrapper">-->
+<!--            <i class ="material-icons circle z-depth-5">info</i>-->
+<!--            <span>    DERNIERE MINUTES<span>-->
+<!--        </div>-->
+<!--    </div>-->
     <div class="ticker-title">
         <span>Breaking News</span>
         <span>Breaking News</span>

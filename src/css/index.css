@@ -23,7 +23,7 @@
 
 #button-inscription {
     border: rgba(253, 139, 51, 0.81) 1px inset;
-    background: linear-gradient(125deg, rgba(166, 63, 63, 0.60), rgba(246, 152, 38, 0.6), rgba(250, 233, 179, 0.6));
+    background: linear-gradient(135deg, rgba(66, 38, 14, 0.75) 0%, rgba(123, 59, 17, 0.81) 11%, rgba(154, 127, 42, 0.9) 29%);
 }
 
 #button-inscription:hover {

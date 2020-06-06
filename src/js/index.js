@@ -23,10 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
 // chartes.php
 if (document.getElementById('fakeSubmit')) {
     document.getElementById('fakeSubmit').addEventListener('click', function (event) {
-        M.toast({html: '<div class="row">' +
+        M.toast({
+            html: '<div class="row">' +
                 '<h4 class="red-text col s12 center-align text-30">HOP, à la poubelle !</h4> ' +
+                '<h5 class="col s12 center-align">Tu penses vraiment que ton avis compte pour nous ?!</h5>' +
                 '<div class="col s12 center-align"><i class="large material-icons red-text">delete</i></div> ' +
-                '</div>'})
+                '</div>'
+        }, false, 12000)
         document.getElementById('name').value = ""
         document.getElementById('textarea').value = ""
     })
