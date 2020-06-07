@@ -1,9 +1,12 @@
 <?php include_once '../templates/header.php' ?>
-<?php include_once './proofs_navigation.php' ?>
 
 <main>
-    <h1 class="center-align secondFont bigText">Chartes de Bonne Conduite</h1>
-
+    <div class="row valign-wrapper">
+        <h1 class="secondFont text-5 center-align col s8 offset-s2">Chartes de bonne conduite</h1>
+        <div id="btnReturn" class="col s2">
+            <button class="gold-back black-back text-contrast" type="button" id="btnReturn" ><i class="material-icons">undo</i></button>
+        </div>
+    </div>
     <div class="container">
     <ul class="collection border-2 z-depth-2 white-text">
         <li class="collection-item avatar black-back">

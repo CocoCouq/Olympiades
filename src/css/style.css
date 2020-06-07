@@ -53,6 +53,12 @@ blockquote {
     border-color: white;
 }
 
+iframe {
+    border: inherit;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
 /*GLOBAL*/
 #logo {
     background: url(../images/globals/logo_brut.png) no-repeat center;
@@ -63,6 +69,10 @@ blockquote {
     margin-left: 5px;
     margin-bottom: 2px;
     padding : inherit;
+}
+
+#facebookLogo {
+    margin-top: 8px;
 }
 
 #facebookSide {

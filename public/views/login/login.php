@@ -29,9 +29,9 @@
     <?php
         }
         else if ($_SESSION['connected'] == 'OK') { ?>
-            <h1 class="center-align secondFont">glOry hOle</h1>
+            <h1 class="center-align secondFont">Mon Compte</h1>
             <section class="container black-back row border-2">
-                <h2 class="col s8 offset-s2 center-align text-contrast gold-back border-gold z-depth-5"><?= $row_player->pseudo ?: '' ?></h2>
+                <h2 class="col s8 offset-s2 center-align text-contrast gold-back border-gold z-depth-5 secondFont"><?= $row_player->pseudo ?: '' ?></h2>
 
                 <article class="col s4 offset-s1">
                     <blockquote class="white-text"><?= $row_player->description ?></blockquote>
@@ -47,9 +47,9 @@
 
                 <article class="row">
                     <div class="center-align text-25 black-text col s12 gold-back margin-t-20 text-contrast secondFont">Restes disponible</div>
-                    <div class="red-text text-30 center-align col s12 gold-back text-contrast secondFont">&</div>
+                    <div class="text-30 center-align col s12 gold-back text-contrast secondFont">&</div>
                     <div class="center-align col s12 gold-back">
-                        <span class="red-text text-darken-2 text-30 text-contrast secondFont">Tiens toi prêt pour la grande aventure</span>
+                        <span class="text-darken-2 text-30 text-contrast secondFont">Tiens toi prêt pour la grande aventure</span>
                     </div>
                 </article>
 

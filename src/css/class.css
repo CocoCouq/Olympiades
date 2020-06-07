@@ -105,6 +105,10 @@
     font-size: 2vh;
 }
 
+.text-8 {
+    font-size: 8vw;
+}
+
 .justify-text {
     text-align: justify;
 }
@@ -126,11 +130,25 @@
     margin-bottom: -10px !important;
 }
 
+.ticker-tip {
+    margin-bottom: 2px;
+}
+
 /*GRID*/
 
 .min-500 {
     min-height: 130px;
     max-height: 130px;
+}
+
+.width-collapsible {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.drink-rules {
+    margin-top: 10px;
+    padding: 5px !important;
 }
 
 

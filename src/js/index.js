@@ -55,3 +55,10 @@ if (document.getElementById('copyNum')) {
         }
     })
 }
+
+// Btn Return
+if (document.getElementById('btnReturn')) {
+    document.getElementById('btnReturn').addEventListener("click", function (event) {
+        window.history.back();
+    })
+}

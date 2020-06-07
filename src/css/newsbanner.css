@@ -8,7 +8,7 @@
     /*padding: 6px 0;*/
     margin-left: 10vw;
     box-shadow: inset 0 -3px 3px rgba(255, 255, 255, 0.5);
-    background-color: #710d21;
+    background-color: #0d5171;
     color: #ffffff;
     -webkit-transform: skew(-45deg, 0);
     transform: skew(-45deg, 0);
@@ -25,11 +25,11 @@
     width: 2500px;
     margin-top: 5px;
     padding-bottom: 5px;
-    color: #6a6868;
+    color: #ffffff;
     font-size: 15px;
     text-transform: uppercase;
     text-shadow: 0 0 2px #6d4406;
-    background: linear-gradient(135deg, #42200e 0%, #4e3111 11%, #634613 24%);
+    background: linear-gradient(135deg, #0e3242 0%, #134058 11%, #147e82 24%);
     /* W3C */
 }
 
@@ -68,7 +68,7 @@
     font-size: 20px;
     text-transform: uppercase;
     text-shadow: 0 0 5px black;
-    background: linear-gradient(135deg, #553112 0%, #894112 11%, #cba52e 29%);
+    background: linear-gradient(135deg, #0f3645 0%, #124289 11%, #2ea6cb 29%);
     /* W3C */
     overflow: hidden;
     white-space: nowrap;
