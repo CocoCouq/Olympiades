@@ -4,13 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     M.Sidenav.init(sidenav)
     let dropNav = document.querySelectorAll('.dropNav')
     M.Dropdown.init(dropNav, {
-        hover: true
-    })
-    let dropProofs = document.querySelectorAll('.dropProofs')
-    M.Dropdown.init(dropProofs, {
+        hover: true,
         coverTrigger: false,
-        onOpenStart: startDropProofs,
-        onCloseStart: closeDropProofs
+        constrainWidth: false
     })
     let collapse = document.querySelectorAll('.collapsible')
     M.Collapsible.init(collapse)
@@ -18,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     M.Materialbox.init(box)
     let modal = document.querySelectorAll('.modal')
     M.Modal.init(modal)
+
 })
 
 // chartes.php
@@ -60,5 +57,13 @@ if (document.getElementById('copyNum')) {
 if (document.getElementById('btnReturn')) {
     document.getElementById('btnReturn').addEventListener("click", function (event) {
         window.history.back();
+    })
+}
+
+// Cart
+if (document.getElementById('btnPay')) {
+    document.getElementById('btnPay').addEventListener('click', function (event) {
+        window.open('https://cagnotte.me/75074-cagnotte-lydia-test/fr', 'blank');
+        window.location.href = '../login/login.php'
     })
 }

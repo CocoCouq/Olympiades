@@ -12,7 +12,7 @@
 
     <ul class="collapsible popout">
         <li>
-            <div class="collapsible-header gold-back secondFont text-contrast">
+            <div class="collapsible-header gold-back secondFont text-contrast text-20 valign-wrapper">
                 <i class="material-icons">touch_app</i>L'essentiel
             </div>
             <div class="collapsible-body black-back white-text row">
@@ -66,7 +66,7 @@
         <ul class="collapsible popout">
 
             <li>
-                <div class="collapsible-header gold-back text-contrast secondFont">
+                <div class="collapsible-header gold-back text-contrast secondFont text-20 valign-wrapper">
                     <i class="material-icons">flag</i>Un tour
                 </div>
                 <div class="collapsible-body black-back white-text"><b>Le tour commence par un cul sec du premier joueur de chaque équipe</b>
@@ -79,18 +79,18 @@
                 </div>
             </li>
             <li>
-                <div class="collapsible-header gold-back text-contrast secondFont">
+                <div class="collapsible-header gold-back text-contrast secondFont text-20 valign-wrapper">
                     <i class="material-icons">gavel</i>Pénalités
                 </div>
                 <div class="collapsible-body black-back white-text">
                     <span>
                         Bien évidemment tout entrave au Fair-Play sera sanctionnait comme mentionné dans la Chartes de Bonne Conduite :
-                        <a href="chartes.php">ici</a> pour ceux qui ne l'auraient pas lu
+                        <a href="./chartes.php?#">ici</a> pour ceux qui ne l'auraient pas lu
                     </span>
                 </div>
             </li>
             <li>
-                <div class="collapsible-header gold-back text-contrast secondFont">
+                <div class="collapsible-header gold-back text-contrast secondFont text-20 valign-wrapper">
                     <i class="material-icons">nature_people</i>Pour les cons
                 </div>
                 <div class="collapsible-body black-back white-text">

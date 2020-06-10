@@ -1,3 +1,4 @@
+// VERIFY FORM
 const filterVide = /(^$)/
 const filterPseudo = /(^[\wéèêëûüîïôàçæœ\s\-.'"!]{4,20}$)/i
 const filterName = /(^[a-zéèêëôœîïûüàáâæç'-]+\s*)$/i

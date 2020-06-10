@@ -3,7 +3,7 @@
 
 <main>
     <?php if ($_SESSION['connected'] != 'OK') { ?>
-    <h1 class="center-align firstFont">Ici, on se connecte</h1>
+    <h1 class="center-align secondFont text-30">Ici, on se connecte</h1>
 
     <section class="container black-back border-2 z-depth-2">
         <form class="section row" action="" method="post">
@@ -30,40 +30,73 @@
         }
         else if ($_SESSION['connected'] == 'OK') { ?>
             <h1 class="center-align secondFont">Mon Compte</h1>
-            <section class="container black-back row border-2">
-                <h2 class="col s8 offset-s2 center-align text-contrast gold-back border-gold z-depth-5 secondFont"><?= $row_player->pseudo ?: '' ?></h2>
 
-                <article class="col s4 offset-s1">
-                    <blockquote class="white-text"><?= $row_player->description ?></blockquote>
-                </article>
+            <div class="center-align section hide-on-med-and-up">
+                <div class=" center-align">
+                    <a class="btn-large grey darken-3 valign-wrapper secondFont text-30" href="../talk/talk.php" title="Annonce toi"><i class="material-icons">touch_app</i> Chambres <i class="material-icons blue-text">forum</i></a>
+                </div>
+            </div>
 
-                <article class="col s5 offset-s1 gold-back border-5 z-depth-5">
-                    <h3 class="center-align text-20 firstFont">
-                        <?= $row_player->f_name ?> <?= substr($row_player->name, 0, 1) ?>.
-                    </h3>
-                </article>
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card gold-back">
+                        <div class="card-content text-contrast">
+                            <span class="card-title secondFont center-align"><?= $row_player->pseudo ?: '' ?> <small>(<?= $row_player->mail ?>)</small></span>
 
-                <article class="divider transparent"></article>
+                            <div class="row valign-wrapper">
+                                <div class="col s6">
+                                    <i class="material-icons large circle border-gold-round">person</i>
+                                </div>
+                                <div class="col s6">
+                                    <div class="padding-5">
+                                        <?= $row_player->f_name ?> <?= substr($row_player->name, 0, 1) ?>.
+                                    </div>
+                                    <div class="padding-5">
+                                        <?= $row_player->phone ?>
+                                    </div>
+                                </div>
+                            </div>
 
-                <article class="row">
-                    <div class="center-align text-25 black-text col s12 gold-back margin-t-20 text-contrast secondFont">Restes disponible</div>
-                    <div class="text-30 center-align col s12 gold-back text-contrast secondFont">&</div>
-                    <div class="center-align col s12 gold-back">
-                        <span class="text-darken-2 text-30 text-contrast secondFont">Tiens toi prêt pour la grande aventure</span>
+
+                            <div class="center-align">
+                               <strong class="text-20 padding-5 border-2">“<?= $row_player->description ?>“</strong>
+                            </div>
+                        </div>
+                        <div class="card-action black-back valign-wrapper">
+                            <form class="padding-5" action="" method="post">
+                                <button name="disconnection" class="btn-large text-30 red darken-4 secondFont">Se déconnecter</button>
+                            </form>
+                        </div>
                     </div>
-                </article>
-
-                <article class="col s10 offset-s1 border-gold black-back margin-t-15 white-text">
-                    <h4 class="flow-text">Email de contact : <?= $row_player->mail ?></h4>
-                    <h5 class="flow-text">Téléphone de contact : <?= $row_player->phone ?></h5>
-                </article>
-
-                <article class="col s10 offset-s1 center-align margin-t-20 margin-b-10">
-                    <form action="" method="post">
-                        <button name="disconnection" class="btn red darken-4">Se déconnecter</button>
-                    </form>
-                </article>
-            </section>
+                </div>
+                <div class="section hide-on-small-only col m6">
+                    <div class="card gold-back">
+                        <div class="card-content black-back white-text">
+                            <span class="card-title secondFont center-align">Viens faire jaser</span>
+                            <div class="row valign-wrapper">
+                                <div class="col s6">
+                                    <i class="material-icons large circle border-gold-round black-text">whatshot</i>
+                                </div>
+                                <div class="col s6">
+                                    <div class="padding-5">
+                                        Montres tes ambitions...
+                                    </div>
+                                    <div class="padding-5">
+                                        Impose avec ta prose !!!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="center-align">
+                                <strong class="text-20 padding-5 border-2">C'est ici que ça se passe</strong>
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <div class="padding-5">
+                                <a class="btn-large text-30 grey darken-3 valign-wrapper secondFont" href="../talk/talk.php" title="Passer à la Caisse">Chambres <i class="material-icons blue-text">forum</i></a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
     <?php }
         else {
             echo 'Erreur de connection';

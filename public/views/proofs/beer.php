@@ -9,7 +9,7 @@
     </div>
     <ul class="collapsible popout">
         <li>
-            <div class="collapsible-header gold-back secondFont text-contrast">
+            <div class="collapsible-header gold-back secondFont text-contrast text-20 valign-wrapper">
                 <i class="material-icons">touch_app</i>L'essentiel
             </div>
             <div class="collapsible-body black-back white-text row">
@@ -65,7 +65,7 @@
             <ul class="collapsible popout">
 
                 <li>
-                    <div class="collapsible-header gold-back text-contrast secondFont">
+                    <div class="collapsible-header gold-back text-contrast secondFont text-20 valign-wrapper">
                         <i class="material-icons">explore</i>Island
                     </div>
                     <div class="collapsible-body black-back white-text">
@@ -73,7 +73,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="collapsible-header gold-back text-contrast secondFont">
+                    <div class="collapsible-header gold-back text-contrast secondFont text-20 valign-wrapper">
                         <i class="material-icons">flash_on</i>Electricité
                     </div>
                     <div class="collapsible-body black-back white-text">
@@ -81,7 +81,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="collapsible-header gold-back text-contrast secondFont">
+                    <div class="collapsible-header gold-back text-contrast secondFont text-20 valign-wrapper">
                         <i class="material-icons">more_horiz</i>Remaniement
                     </div>
                     <div class="collapsible-body black-back white-text">
@@ -92,7 +92,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="collapsible-header gold-back text-contrast secondFont">
+                    <div class="collapsible-header gold-back text-contrast secondFont text-20 valign-wrapper">
                         <i class="material-icons">smoke_free</i>Rédemption
                     </div>
                     <div class="collapsible-body black-back white-text">
@@ -100,7 +100,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="collapsible-header gold-back text-contrast secondFont">
+                    <div class="collapsible-header gold-back text-contrast secondFont text-20 valign-wrapper">
                         <i class="material-icons">bug_report</i>Miyagi
                     </div>
                     <div class="collapsible-body black-back white-text">

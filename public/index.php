@@ -29,10 +29,10 @@
                 <ul class="right hide-on-med-and-down">
                     <!--Proofs-->
                     <li>
-                        <a class='dropdown-trigger text-20 dropNav secondFont' href='#' data-target='dropdownProof' title="Toutes les epreuves">Epreuves</a>
+                        <a class='dropdown-trigger text-20 dropNav secondFont' data-target='dropdownProof' title="Toutes les epreuves">Epreuves</a>
 
-                        <ul id='dropdownProof' class='dropdown-content border-gold gold-back'>
-                            <li class="gold-back"><a class="gold-back black-text text-contrast" href="./views/proofs/chartes.php" title="Fair-Play">Fair-Play</a></li>
+                        <ul id='dropdownProof' class='dropdown-content border-gold gold-back secondFont'>
+                            <li class="gold-back"><a class="gold-back black-text text-contrast" href="./views/proofs/chartes.php?#" title="Fair-Play">Fair-Play</a></li>
                             <li class="divider"></li>
                             <div class="gold-back">
                                 <li><a class="black-text text-contrast" href="./views/proofs/beer.php" title="Beer-Pong">Beer-Pong</a></li>
@@ -43,6 +43,9 @@
                     </li>
                     <li>
                         <a class='text-20 secondFont' href='./views/talk/talk.php' title="Trash Talk">Trash talk</a>
+                    </li>
+                    <li>
+                        <a class='text-20 secondFont' href='./views/presentation/about.php' title="Be Olympiades"><i class="material-icons yellow-text">grade</i></a>
                     </li>
                     <li class="gold-back"><a href="./views/login/login.php" title="Compte"><i class="material-icons black-text text-contrast">person</i></a></li>
                     <li><a href="#" title="facebook"><img id="facebookLogo" class="" src="./assets/images/globals/facebook.png" alt=""></a></li>
@@ -63,16 +66,16 @@
             <div class="center-align secondFont text-20 col s12"><b>be olympiades</b></div>
         </div>
     </li>
-    <li><a href="./index.php" class="white-text secondFont" title="Accueil">Accueil<i class="material-icons white-text">home</i></a></li>
-    <li><a href="./views/talk/talk.php" class="white-text secondFont" title="Trash Talk">Trash talk<i class="material-icons red-text">whatshot</i></a></li>
-    <li><a href="./views/presentation/about.php" class="white-text secondFont" title="Trash Talk">Be Olympiades<i class="material-icons yellow-text">grade</i></a></li>
+    <li><a href="./index.php" class="white-text secondFont text-20" title="Accueil">Accueil<i class="material-icons white-text">home</i></a></li>
+    <li><a href="./views/talk/talk.php" class="white-text secondFont text-20" title="Trash Talk">Trash talk<i class="material-icons red-text">whatshot</i></a></li>
+    <li><a href="./views/presentation/about.php" class="white-text secondFont text-20" title="Trash Talk">Be Olympiades<i class="material-icons yellow-text">grade</i></a></li>
     <ul class="collapsible white-text">
         <li>
             <div class="collapsible-header gold-back row">
                 <div class="col s12 valign-wrapper secondFont text-30 black-text text-contrast"><i class="material-icons">arrow_downward</i>Epreuves</div>
             </div>
             <div class="collapsible-body grey darken-3">
-                <div class="row margin-b-d10 side-items"><a class="grey-text text-lighten-3 text-20 col s12 secondFont" href="./views/proofs/chartes.php" title="Fair-Play"><i class="tiny material-icons">description</i>    Fair-Play</a></div>
+                <div class="row margin-b-d10 side-items"><a class="grey-text text-lighten-3 text-20 col s12 secondFont" href="./views/proofs/chartes.php?#" title="Fair-Play"><i class="tiny material-icons">description</i>    Fair-Play</a></div>
                 <div class="row margin-b-d10 side-items"><a class="grey-text text-lighten-1 text-20 col s12 secondFont" href="./views/proofs/beer.php" title="Beer-Pong"><i class="tiny material-icons">local_drink</i>    Beer-Pong</a></div>
                 <div class="row margin-b-d10 side-items"><a class="grey-text text-lighten-1 text-20 col s12 secondFont" href="./views/proofs/corn.php" title="Cornhole"><i class="tiny material-icons">golf_course</i>    Grenouille</a></div>
                 <div class="row margin-b-d10 side-items"><a class="grey-text text-lighten-1 text-20 col s12 secondFont" href="./views/proofs/flip.php" title="Flip Cup"><i class="tiny material-icons">hourglass_full</i>    Flip cup</a></div>
@@ -81,7 +84,7 @@
         <li class="divider"></li>
     </ul>
     <li>
-        <a href="./views/login/login.php" class="white-text secondFont" title="Compte"><i class="material-icons white-text">person</i> Mon Compte</a>
+        <a href="./views/login/login.php" class="white-text secondFont text-20" title="Compte"><i class="material-icons white-text">person</i> Mon Compte</a>
     </li>
     <li class="divider"></li>
     <li>
@@ -108,19 +111,16 @@
         <div id="clock8" class="black-back border-gold white-text oneElven bigText clockNumbers">0</div>
     </div>
 
-    <!--SUBSCRIBE MESSAGE-->
-    <div id="subscribeBannerMessage" class="center-align text-25"><?= $message ?></div>
-
     <section id="indexImage">
             <div id="filter-grey" class="white-text valign-wrapper row">
                 <div class="col s12">
                     <!--FORM SUBSCRIPTION-->
                     <div class="center-align section">
                         <?php if ($_SESSION['connected'] == 'OK') { ?>
-                            <a id="button-talk" class="btn-large secondFont text-30 yellow-text z-depth-5" href="./views/talk/talk.php" title="Trash Talk"><i class="material-icons red-text">whatshot</i> Trash Talk <i class="material-icons red-text">whatshot</i></a>
+                            <a id="button-talk" class="border-5 secondFont text-40 yellow-text z-depth-5" href="./views/talk/talk.php" title="Trash Talk"><i class="material-icons red-text">whatshot</i> Trash Talk <i class="material-icons red-text">whatshot</i></a>
                         <?php } else {?>
                             <div class="section">
-                                <a id="button-inscription" class="btn-large secondFont text-30 z-depth-5" href="./views/login/subscribe.php" title="Inscris toi">Inscription</a>
+                                <a id="button-inscription" class="btn-large secondFont text-40 z-depth-5" href="./views/login/subscribe.php" title="Inscris toi">Inscription</a>
                             </div>
                             <div>
                                 <a class="btn-small text-20 gold-back secondFont black-text text-contrast" href="./views/login/login.php" title="Se connecter">Déjà inscrit</a>

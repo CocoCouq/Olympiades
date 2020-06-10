@@ -1,10 +1,93 @@
+<?php session_start() ?>
 <?php include_once '../templates/header.php' ?>
 
-<main>
+<!--BOOT PAGE-->
+<main id="bootPage" class="gold-back <?= $_SESSION['message'] != '' ? 'hide' : '' ?>">
+    <h1 class="center-align secondFont black-text text-contrast"><strong>Attention</strong></h1>
+
+    <article class="black-back">
+        <p class="text-20 center-align white-text">
+            Après ton inscription, on va te demander de payer ta participation
+        </p>
+        <p class="center-align white-text secondFont text-20">
+            Assures-toi bien d'avoir ton larfeuille ma caille
+        </p>
+        <p class="row">
+            <img class="responsive-img col s4 offset-s1" src="../../assets/images/cart/lydia.png" alt="Lydia">
+            <img class="responsive-img col s5 offset-s1" src="../../assets/images/cart/cards.png" alt="Lydia">
+        </p>
+
+        <div class="border-gold">
+
+            <p class="center-align secondFont text-40 white-text margin-b-d10"><i class="material-icons">local_bar</i> 3 Offres <i class="material-icons">local_bar</i></p>
+            <!-- Modal Trigger -->
+            <div class="center-align section">
+                <a class="btn-large modal-trigger gold-back black-text secondFont text-40 text-contrast" href="#modalPrices">VOIR LES MENUS <i class="material-icons">touch_app</i></a>
+            </div>
+
+        </div>
+        <!-- Modal Structure -->
+        <div id="modalPrices" class="modal">
+            <div class="modal-content">
+                <h4 class="center-align text-25 secondFont">Envie d'en découdre ?</h4>
+                <div class="row">
+                    <div class="col s12 m4 center-align">
+                        <h6 class="firstFont text-30">Menu Enfant</h6>
+                        <h5 class="secondFont">35€</h5>
+                        <ul>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                        </ul>
+                    </div>
+                    <div class="col s12 m4 center-align">
+                        <h6 class="firstFont text-30">Menu Adulte</h6>
+                        <h5 class="secondFont">50€</h5>
+                        <ul>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                        </ul>
+                    </div>
+                    <div class="col s12 m4 center-align">
+                        <h6 class="firstFont text-30">Menu Gourmand</h6>
+                        <h5 class="center-align secondFont">80€</h5>
+                        <ul>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article>
+        <div class="center-align section">
+            <button id="showFormBtn" class="waves-effect blue-grey darken-4 waves-light btn-large secondFont text-30 margin-b-10">
+                M'inscrire et payer
+            </button>
+        </div>
+    </article>
+</main>
+
+<!--FORM-->
+<main id="mainForm" class="<?= $_SESSION['message'] == '' ? 'hide' : '' ?>">
     <h1 class="center-align secondFont text-30">INSCRIPTION</h1>
     <div class="container section">
 
-<form class="black-back border-2 z-depth-2" action="../../index.php" method="post">
+        <!--SUBSCRIBE MESSAGE-->
+        <div id="subscribeBannerMessage" class="center-align text-25 text-contrast"><?= $_SESSION['message'] ?></div>
+<form class="black-back border-2 z-depth-2" action="../../controllers/c_subscribe.php" method="post">
         <section class="row">
             <article class="input-field col s12 m6">
                 <input id="nameInput" type="text" class="validate white-text" name="name">
@@ -65,4 +148,16 @@
     </div>
 </main>
 
+
+<script>
+    if (document.getElementById('showFormBtn')) {
+        document.getElementById('showFormBtn').addEventListener('click', function (event) {
+            document.getElementById('mainForm').classList.remove('hide')
+            document.getElementById('bootPage').classList.add('hide')
+        })
+    }
+</script>
+
+
 <?php include_once '../templates/footer.php' ?>
+

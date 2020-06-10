@@ -86,27 +86,31 @@
 }
 
 .text-25 {
-    font-size: 25px;
+    font-size: 25px !important;
 }
 
 .text-20 {
-    font-size: 20px;
+    font-size: 20px !important;
 }
 
 .text-30 {
-    font-size: 30px;
+    font-size: 30px !important;
+}
+
+.text-40 {
+    font-size: 40px !important;
 }
 
 .text-5 {
-    font-size: 5vh;
+    font-size: 5vh !important;
 }
 
 .text-2 {
-    font-size: 2vh;
+    font-size: 2vh !important;
 }
 
 .text-8 {
-    font-size: 8vw;
+    font-size: 8vw !important;
 }
 
 .justify-text {
@@ -128,6 +132,10 @@
 
 .margin-b-d10 {
     margin-bottom: -10px !important;
+}
+
+.padding-5 {
+    padding: 5px !important;
 }
 
 .ticker-tip {
