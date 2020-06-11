@@ -26,7 +26,7 @@
             <a class="btn" href="../talk/talk.php" target="_blank">chat</a>
         </div>
         <div class="col s3 center-align">
-            <a class="btn" href="./index.php">Retour</a>
+            <a class="btn" href="./index.php"><i class="material-icons">home</i></a>
         </div>
 
     </section>

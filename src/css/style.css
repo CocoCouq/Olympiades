@@ -45,9 +45,9 @@ a {
     outline: none;
 }
 
-thead {
-    background-color: rgba(100, 149, 237, 0.85);
-}
+/*thead {*/
+/*    background-color: rgba(100, 149, 237, 0.85);*/
+/*}*/
 
 blockquote {
     border-color: white;

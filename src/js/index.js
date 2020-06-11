@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
     M.Materialbox.init(box)
     let modal = document.querySelectorAll('.modal')
     M.Modal.init(modal)
+    let select = document.querySelectorAll('select');
+    M.FormSelect.init(select);
 
 })
 

@@ -3,7 +3,6 @@ session_start();
 if ($_SESSION['connected'] != 'OK')
     header('location:../../index.php');
 ?>
-
 <!doctype html>
 <html lang="fr">
 <head>

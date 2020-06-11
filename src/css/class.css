@@ -159,4 +159,11 @@
     padding: 5px !important;
 }
 
+.thAdmin {
+    border-radius: inherit;
+}
+
+.modalPay {
+    height: 600px !important;
+}
 

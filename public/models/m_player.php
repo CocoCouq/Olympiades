@@ -117,6 +117,40 @@ class Player {
         }
     }
 
+    // Pay
+    public function getPayList() : array
+    {
+        $request = 'SELECT id, name, f_name, menu FROM participants WHERE payed = true ORDER BY menu DESC';
+        $result = $this->db->prepare($request);
+        $result->execute();
+        $tab = $result->fetchAll(PDO::FETCH_OBJ);
+        $result->closeCursor();
+
+        return $tab;
+    }
+
+    public function getNotPayList() : array
+    {
+        $request = 'SELECT id, name, f_name FROM participants WHERE payed IS NOT true';
+        $result = $this->db->prepare($request);
+        $result->execute();
+        $tab = $result->fetchAll(PDO::FETCH_OBJ);
+        $result->closeCursor();
+
+        return $tab;
+    }
+
+    // Set true for payed and set Menu for admin
+    public function setPay(int $id, int $menu) : void
+    {
+        $request = 'UPDATE participants SET payed = 1, menu = :menu WHERE id = :id';
+        $result = $this->db->prepare($request);
+        $result->bindParam(':menu', $menu);
+        $result->bindParam(':id', $id);
+        $result->execute();
+        $result->closeCursor();
+    }
+
     public function __destruct()
     {
         $this->db = null;

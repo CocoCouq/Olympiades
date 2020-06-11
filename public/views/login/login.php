@@ -30,6 +30,16 @@
         }
         else if ($_SESSION['connected'] == 'OK') { ?>
             <h1 class="center-align secondFont">Mon Compte</h1>
+            <?php if ($row_player->menu == null) { ?>
+                <article class="center-align red white-text">
+                    <p class="text-20">
+                        <b><i class="center-align"></i>Nous possédons actuellement à la vérification de ton paiement</b></p>
+                    <p>
+                        Cette alerte disparaitra lorsque nous aurons validé votre inscription
+                    </p>
+                    <p class="text-2">(Validation en moins de 24h)</p>
+                </article>
+            <?php } ?>
 
             <div class="center-align section hide-on-med-and-up">
                 <div class=" center-align">
@@ -45,7 +55,11 @@
 
                             <div class="row valign-wrapper">
                                 <div class="col s6">
-                                    <i class="material-icons large circle border-gold-round">person</i>
+                                    <?php if ($row_player->menu != null) { ?>
+                                    <p class="center-align border-gold-round text-20 firstFont"><?= $row_player->menu == 1 ? 'Menu Enfant' : ($row_player->menu == 2 ? 'Menu Adulte' : 'Menu Gourmand') ?></p>
+                                    <?php } else {?>
+                                        <i class="material-icons large circle border-gold-round">person</i>
+                                    <?php } ?>
                                 </div>
                                 <div class="col s6">
                                     <div class="padding-5">
@@ -85,9 +99,6 @@
                                         Impose avec ta prose !!!
                                     </div>
                                 </div>
-                            </div>
-                            <div class="center-align">
-                                <strong class="text-20 padding-5 border-2">C'est ici que ça se passe</strong>
                             </div>
                         </div>
                         <div class="card-action">

@@ -32,11 +32,11 @@
             <h1 class="col s12 center-align">Gestion des joueurs</h1>
         </section>
 
-            <div>
+            <p class="row flow-text center-align red white-text z-depth-2"><?= $message ?></p>
+
+            <div class="center-align section">
+                <a class="btn-large red text-30" href="./valid_pay.php" title="Verifier les paiements"><i class="material-icons green-text">attach_money</i> Gérer les paiements <i class="material-icons green-text">attach_money</i></a>
             </div>
-
-        <p class="row flow-text center-align red white-text z-depth-2"><?= $message ?></p>
-
             <div class="container center-align">
                 <div>
                     <a
