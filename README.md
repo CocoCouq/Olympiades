@@ -4,10 +4,7 @@
 
 TODO :
 
-#### Global
-- A propos
-
-#### Proof :
+- À propos
 - Third proof (Grenouille)
 
 ***
