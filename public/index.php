@@ -11,11 +11,6 @@
 </head>
 <body>
 
-
-<style type="text/css">
-</style>
-
-
 <header>
     <!--NAVIGATION BAR-->
     <div class="navbar-fixed">
@@ -117,10 +112,10 @@
                     <!--FORM SUBSCRIPTION-->
                     <div class="center-align section">
                         <?php if ($_SESSION['connected'] == 'OK') { ?>
-                            <a id="button-talk" class="border-5 secondFont text-40 yellow-text z-depth-5" href="./views/talk/talk.php" title="Trash Talk"><i class="material-icons red-text">whatshot</i> Trash Talk <i class="material-icons red-text">whatshot</i></a>
+                            <a id="button-talk" class="border-5 secondFont yellow-text z-depth-5" href="./views/talk/talk.php" title="Trash Talk"><i class="material-icons red-text">whatshot</i> Trash Talk <i class="material-icons red-text">whatshot</i></a>
                         <?php } else {?>
                             <div class="section">
-                                <a id="button-inscription" class="btn-large secondFont text-40 z-depth-5" href="./views/login/subscribe.php" title="Inscris toi">Inscription</a>
+                                <a id="button-inscription" class="secondFont z-depth-5" href="./views/login/subscribe.php" title="Inscris toi">Inscription</a>
                             </div>
                             <div>
                                 <a class="btn-small text-20 gold-back secondFont black-text text-contrast" href="./views/login/login.php" title="Se connecter">Déjà inscrit</a>
@@ -152,7 +147,7 @@
 
 </div>
 <!--COOKIES BANNER-->
-<?php if (!$_COOKIE['accept']) {?>
+<?php if (!$_COOKIE['accept'] && $_SESSION['connected'] != 'OK') {?>
 <form action="" method="post">
     <div class="cookies white-text valign-wrapper">
         Afin de t'offrir une meilleure expérience de navigation, nous partons du principes que tu acceptes l'utilisation des cookies.

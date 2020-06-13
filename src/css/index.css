@@ -22,8 +22,19 @@
 }
 
 #button-inscription {
-    border: rgba(253, 139, 51, 0.81) 1px inset;
-    background: linear-gradient(135deg, rgba(66, 38, 14, 0.75) 0%, rgba(123, 59, 17, 0.81) 11%, rgba(154, 127, 42, 0.9) 29%);
+    border: rgba(253, 139, 51, 0.75) 1px inset;
+    background: linear-gradient(135deg, rgba(66, 38, 14, 0.70) 0%, rgba(123, 59, 17, 0.75) 11%, rgba(154, 127, 42, 0.80) 29%);
+    font-size: 10vw;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    max-font-size: 40px !important;
+}
+
+@media screen and (min-width: 800px) {
+    #button-inscription {
+        font-size: 70px;
+    }
 }
 
 #button-inscription:hover {
@@ -37,6 +48,13 @@
 #button-talk {
     border: rgba(253, 139, 51, 0.81) 1px inset;
     background: linear-gradient(125deg, rgba(0, 0, 0, 0.6), rgba(62, 62, 62, 0.6), rgba(146, 146, 146, 0.6));
+    font-size: 10vw;
+}
+
+@media screen and (min-width: 750px) {
+    #button-talk {
+        font-size: 60px;
+    }
 }
 
 #button-talk:hover {

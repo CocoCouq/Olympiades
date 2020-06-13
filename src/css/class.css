@@ -28,7 +28,7 @@
 /*BORDER*/
 .border-gold {
     border: 3px solid;
-    border-image: url("../images/styles/gold.jpg") 1 1 round;
+    border-image: url("../images/styles/gold.jpg") 150 150;
 }
 
 .border-gold-round {

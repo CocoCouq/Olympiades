@@ -4,7 +4,7 @@
     <div class="row valign-wrapper">
         <h1 class="secondFont text-8 center-align col s8 offset-s2">Beer-Pong</h1>
         <div id="btnReturn" class="col s2">
-            <button class="gold-back black-back text-contrast" type="button" id="btnReturn" ><i class="material-icons">undo</i></button>
+            <button class="gold-back btn black-text text-contrast" type="button" id="btnReturn" ><i class="material-icons">undo</i></button>
         </div>
     </div>
     <ul class="collapsible popout">
@@ -49,7 +49,6 @@
 
 
         <div class="row">
-
             <iframe class="col s12 gold-back"
                     width="653" height="367"
                     src="https://www.youtube.com/embed/Yvb5v5A4r64"

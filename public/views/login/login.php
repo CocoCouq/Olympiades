@@ -31,13 +31,16 @@
         else if ($_SESSION['connected'] == 'OK') { ?>
             <h1 class="center-align secondFont">Mon Compte</h1>
             <?php if ($row_player->menu == null) { ?>
-                <article class="center-align red white-text">
+                <article class="center-align red darken-4 white-text">
                     <p class="text-20">
                         <b><i class="center-align"></i>Nous possédons actuellement à la vérification de ton paiement</b></p>
                     <p>
-                        Cette alerte disparaitra lorsque nous aurons validé votre inscription
+                        Cette alerte disparaitra lorsque nous aurons validé ton inscription
                     </p>
                     <p class="text-2">(Validation en moins de 24h)</p>
+                    <p class="center-align text-20">
+                        <b>En attendant viens sur le <a class="white-text" href="../talk/talk.php" title="Cliques !">Trash Talk <i class="material-icons">forum</i></a></b>
+                    </p>
                 </article>
             <?php } ?>
 
@@ -108,6 +111,16 @@
                         </div>
                     </div>
             </div>
+
+
+                <?php if ($row_player->menu == null) { ?>
+                    <article class="center-align white-text">
+                        <div class="text-20">
+                            <b>Problème de paiement ?! C'est ici :</b>
+                        </div>
+                        <a class="blue-text text-lighten-3 text-30" href="../cart/cart.php" title="Paiement">Payer</a>
+                    </article>
+                <?php } ?>
     <?php }
         else {
             echo 'Erreur de connection';

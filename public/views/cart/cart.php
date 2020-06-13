@@ -84,11 +84,13 @@ if ($_SESSION['connected'] != 'OK')
                             <li>1. Cliquez sur le bouton en dessous</li>
                             <li><b>2. Remplis le montant de ton package</b></li>
                             <li>Donne ton nom et ton prénom </li>
-                            <li class="divider"></li>
-                            <li class="red-text">TU VEUX UTILISER <strong class="blue-text">LYDIA</strong></li>
-                            <li>Une fois le formulaire remplis, cliques sur "Payer avec Lydia", ouvres ton application (sur ton super smartphone), tu pourras y accepter le paiement.</li>
-                            <li class="divider"></li>
-                            <li class="red-text">TU NE POSSÈDES PAS <strong class="blue-text">LYDIA</strong></li>
+                            <li class="divider margin-t-20"></li>
+                            <li class="red-text center-align"><b>TU VEUX UTILISER <strong class="blue-text">LYDIA</strong></b></li>
+                            <li class="divider margin-b-10"></li>
+                            <li class="margin-b-10">Une fois le formulaire remplis, cliques sur "Payer avec Lydia", ouvres ton application (sur ton super smartphone), tu pourras y accepter le paiement.</li>
+                            <li class="divider margin-t-20"></li>
+                            <li class="red-text center-align"><b>TU NE POSSÈDES PAS <strong class="blue-text">LYDIA</strong></b></li>
+                            <li class="divider margin-b-10"></li>
                             <li>Une fois le formulaire remplis, cliques sur "Payer par carte" et remplis les informations demandées.</li>
                         </ul>
                     </div>
@@ -97,8 +99,8 @@ if ($_SESSION['connected'] != 'OK')
             </div>
 
             <div class="center-align section">
-                <a id="btnPay" class="btn-large gold-back black-text text-contrast secondFont" href="#PaiementLinkService" title="Payer sa part" target="blank">
-                    Payer son dut
+                <a id="btnPay" class="btn-large gold-back black-text text-contrast secondFont text-30" href="#PaiementLinkService" title="Payer sa part" target="blank">
+                    Payer son dût
                 </a>
             </div>
         </section>
