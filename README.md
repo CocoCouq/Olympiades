@@ -3,16 +3,12 @@
 ***
 
 TODO :
--
-#### Global : 
-- Choose fonts
-- Define date
 
-#### Admin :
-- Clear code
+#### Global
+- A propos
 
-#### Talk :
-- Verify with android 
+#### Proof :
+- Third proof (Grenouille)
 
 ***
 ## Project setup
@@ -38,6 +34,8 @@ TODO :
 ### DATABASE
 - You can find the SQL script for creating the database in the UML folder
 - The variables for the database connection can be found in the public/models folder.
+- If you want connect cart change url line 102
 
         UML > database.sql
         public > models > connexion.php
+        public > views > cart > cart.php
